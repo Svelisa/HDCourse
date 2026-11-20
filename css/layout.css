@@ -1,0 +1,195 @@
+/* ==========================================================================
+   layout.css – מבנה העמוד: כותרת עליונה, תפריט צד, אזור התוכן
+   ========================================================================== */
+
+/* ---------- כותרת עליונה ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 11;
+  padding: 0.7rem clamp(1rem, 3vw, 2rem);
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header a {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* ---------- מעטפת: תפריט צד + תוכן ---------- */
+.shell {
+  display: grid;
+  grid-template-columns: 19rem minmax(0, 1fr);
+  gap: 1.5rem;
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 1.5rem clamp(1rem, 3vw, 2rem) 3rem;
+}
+
+/* כשגוללים לפרק, משאירים מקום לכותרת העליונה */
+main section,
+main > h2.sec {
+  scroll-margin-top: 5rem;
+}
+
+/* ---------- תפריט צד (נבנה אוטומטית ב-js/toc.js) ---------- */
+.side-menu {
+  position: sticky;
+  top: 4.5rem;
+  align-self: start;
+  padding: 0.9rem 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.side-menu a {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.95rem;
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 0.6rem;
+  border-inline-start: 3px solid transparent;
+}
+
+.side-menu a:hover {
+  background: var(--bg);
+}
+
+/* הפרק הפעיל (מסומן תוך כדי גלילה) */
+.side-menu a[aria-current="true"],
+.side-menu a[aria-current="page"] {
+  font-weight: 700;
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
+  border-inline-start-color: var(--accent);
+}
+
+/* ---------- פס התקדמות (ביחידות בלבד) ---------- */
+.prog {
+  padding: 0 0.4rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.bar {
+  height: 0.5rem;
+  margin: 0.35rem 0 0.7rem;
+  overflow: hidden;
+  background: var(--line);
+  border: 1px solid var(--ctl);
+  border-radius: 9px;
+}
+
+.bar i {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--icon);
+  transition: width 0.3s;
+}
+
+/* ---------- שורה תחתונה: כפתור הבית בעמודת התפריט, ניווט בעמודת התוכן ---------- */
+/* שורת הניווט: לא דבוקה למסך, אבל תמיד באותו מקום בעמוד.
+   העמוד ממלא לפחות את גובה המסך, והשורה יושבת בתחתית שלו, ולכן
+   בכל העמודים שהתוכן שלהם קצר מהמסך היא באותה נקודה בדיוק. */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.shell {
+  flex: 1 0 auto;
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+.dock {
+  width: 100%;
+}
+
+.dock-in {
+  display: grid;
+  grid-template-columns: 19rem minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 3vw, 2rem) 2rem;
+}
+
+.dock .foot {
+  margin-top: 0;
+}
+
+.home-side {
+  align-self: start;
+  justify-self: start;
+}
+
+/* ---------- מסך רחב: התפריט לא ארוך יותר מהמסך ---------- */
+@media (min-width: 861px) {
+  .side-menu {
+    max-height: calc(100vh - 5.5rem);
+    overflow-y: auto;
+  }
+}
+
+/* ---------- טלפון וטאבלט: התפריט הופך לשורת לחצנים בראש הדף ---------- */
+@media (max-width: 860px) {
+  .shell {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .side-menu {
+    position: static;
+    min-width: 0;
+  }
+
+  /* בטלפון כפתור הבית נמצא בתוך שורות הניווט */
+  .dock .home-side {
+    display: none;
+  }
+
+  .dock-in {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    padding-bottom: calc(1.25rem + env(safe-area-inset-bottom));
+  }
+
+  .menu-list {
+    flex-direction: row;
+    gap: 0.4rem;
+    padding-bottom: 0.3rem;
+    overflow-x: auto;
+  }
+
+  .side-menu a {
+    white-space: nowrap;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+  }
+}
+
+/* פרק שהושלם (מסומן ב-js/progress.js) */
+.side-menu a.done::after {
+  content: "✓";
+  margin-inline-start: auto;
+  padding-inline-start: 0.5rem;
+  font-weight: 800;
+  color: var(--icon);
+}

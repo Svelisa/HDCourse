@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>סוגי מדפסות | יחידה 4 | הכשרת נציגי HELPDESK</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+  <a class="skip" href="#main">דילוג לתוכן הראשי</a>
+  <header class="site-header">
+    <a href="../../index.html">הכשרת נציגי HELPDESK</a>
+  </header>
+
+  <div class="shell">
+    <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
+    <nav class="side-menu" aria-label="פרקי היחידה">
+      <div class="prog" data-module="4" data-lessons="4">
+        <span id="pt" aria-live="polite"></span>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><i id="pb"></i></div>
+      </div>
+      <div class="menu-list">
+        <a href="index.html">סקירת היחידה</a>
+        <a href="chapter-1.html" data-lesson="4-1" aria-current="page">סוגי מדפסות</a>
+        <a href="chapter-2.html" data-lesson="4-2">הגדרת מדפסת למשתמש</a>
+        <a href="chapter-3.html" data-lesson="4-3">טיפול בתקלות בסיסיות</a>
+        <a href="chapter-4.html" data-lesson="4-4">בדיקת ידע</a>
+      </div>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <section class="hero slim">
+        <p class="hero-sub">יחידה 4 · פרק 1 מתוך 4</p>
+        <h1>סוגי מדפסות</h1>
+      </section>
+
+      <section class="card">
+        <h2>תוכן הפרק</h2>
+        <div class="ph">כאן יופיע תוכן הפרק.</div>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
+  <div class="dock">
+    <div class="dock-in">
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <div class="foot" role="group" aria-label="ניווט בין פרקים">
+        <a class="btn ghost prev" href="index.html"><span aria-hidden="true">→</span> סקירת היחידה</a>
+        <a class="btn ghost next" href="chapter-2.html">הפרק הבא <span aria-hidden="true">←</span></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <button type="button" class="btn mark" data-lesson="4-1" aria-pressed="false">סימון כהושלם</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../js/icons.js"></script>
+  <script src="../../js/progress.js"></script>
+</body>
+</html>
