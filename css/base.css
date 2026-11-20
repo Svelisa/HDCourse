@@ -8,7 +8,7 @@
 
 :root {
   box-sizing: border-box;
-  color-scheme: light;
+  color-scheme: light dark;
 
   /* ניטרליים – מצב בהיר */
   --bg: #e8eaea;          /* רקע הדף */
@@ -31,7 +31,7 @@
 }
 
 /* מצב כהה – לפי הגדרת המכשיר */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root:not([data-theme="light"]) {
     --bg: #1c1619;
     --surface: #2a2227;
