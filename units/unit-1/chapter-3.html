@@ -37,8 +37,18 @@
       </section>
 
       <section class="card">
-        <h2>שאלות</h2>
-        <div class="ph">כאן יוכנסו שאלות עם משוב מיידי.</div>
+        <h2>תרגיל מיון: של מי האחריות?</h2>
+        <p>גררו כל תחום אחריות לתא המתאים: נציג, טכנאי שטח או שניהם (תחום זהה בשני התפקידים). אפשר גם ללחוץ על תחום ואז על "הוסיפו לכאן" בתא הרצוי.</p>
+        <div class="dd" data-lesson="1-3">
+          <div class="dd-pool" role="group" aria-label="תחומים שממתינים לשיבוץ"><button type="button" class="dd-item" data-answer="t" aria-pressed="false">ניהול מלאי IT</button><button type="button" class="dd-item" data-answer="b" aria-pressed="false">מתן שירות</button><button type="button" class="dd-item" data-answer="b" aria-pressed="false">שיתוף פעולה</button><button type="button" class="dd-item" data-answer="b" aria-pressed="false">ניהול משתמשים</button><button type="button" class="dd-item" data-answer="b" aria-pressed="false">תיעוד</button><button type="button" class="dd-item" data-answer="b" aria-pressed="false">חומרה והתקנים</button><button type="button" class="dd-item" data-answer="b" aria-pressed="false">הדרכות</button><button type="button" class="dd-item" data-answer="b" aria-pressed="false">אבטחת מידע</button><button type="button" class="dd-item" data-answer="t" aria-pressed="false">עמדת מחשב</button><button type="button" class="dd-item" data-answer="n" aria-pressed="false">פתרון בעיות</button><button type="button" class="dd-item" data-answer="b" aria-pressed="false">תקשורת</button><button type="button" class="dd-item" data-answer="t" aria-pressed="false">גיבוי ושחזור</button><button type="button" class="dd-item" data-answer="b" aria-pressed="false">יישומי תוכנה</button></div>
+          <div class="dd-bins"><section class="dd-bin" data-id="n" data-name="נציג" aria-label="נציג"><h3>נציג</h3><p class="sub">אחריות של צוות HelpDesk בלבד</p><button type="button" class="dd-place" disabled>הוסיפו לכאן</button><div class="dd-list" role="group" aria-label="תחומים בתא נציג"></div></section><section class="dd-bin" data-id="t" data-name="טכנאי שטח" aria-label="טכנאי שטח"><h3>טכנאי שטח</h3><p class="sub">אחריות של טכנאי השטח בלבד</p><button type="button" class="dd-place" disabled>הוסיפו לכאן</button><div class="dd-list" role="group" aria-label="תחומים בתא טכנאי שטח"></div></section><section class="dd-bin" data-id="b" data-name="שניהם" aria-label="שניהם"><h3>שניהם</h3><p class="sub">תחום משותף לשני התפקידים</p><button type="button" class="dd-place" disabled>הוסיפו לכאן</button><div class="dd-list" role="group" aria-label="תחומים בתא שניהם"></div></section></div>
+          <div class="dd-actions">
+            <button type="button" class="btn dd-check">בדיקה</button>
+            <button type="button" class="btn ghost dd-back">החזרה למאגר</button>
+            <button type="button" class="btn ghost dd-reset">איפוס</button>
+          </div>
+          <p class="dd-result" role="status" aria-live="polite"></p>
+        </div>
       </section>
     </main>
 
@@ -47,11 +57,11 @@
   <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
   <div class="dock">
     <div class="dock-in">
-      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
       <div class="foot" role="group" aria-label="ניווט בין פרקים">
-        <a class="btn ghost prev" href="chapter-2.html"><span aria-hidden="true">→</span> הפרק הקודם</a>
-        <a class="btn ghost next" href="../unit-2/index.html">היחידה הבאה <span aria-hidden="true">←</span></a>
-        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <a class="btn ghost prev" href="chapter-2.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> הפרק הקודם</a>
+        <a class="btn ghost next" href="../unit-2/index.html">היחידה הבאה <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
         <button type="button" class="btn mark" data-lesson="1-3" aria-pressed="false">סימון כהושלם</button>
       </div>
     </div>
@@ -59,5 +69,6 @@
 
   <script src="../../js/icons.js"></script>
   <script src="../../js/progress.js"></script>
+  <script src="../../js/dragdrop.js"></script>
 </body>
 </html>

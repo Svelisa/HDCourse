@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Registry | יחידה 3 | הכשרת נציגי HELPDESK</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+  <a class="skip" href="#main">דילוג לתוכן הראשי</a>
+  <header class="site-header">
+    <a href="../../index.html">הכשרת נציגי HELPDESK</a>
+  </header>
+
+  <div class="shell">
+    <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
+    <nav class="side-menu" aria-label="פרקי היחידה">
+      <div class="prog" data-module="3" data-lessons="10">
+        <span id="pt" aria-live="polite"></span>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><i id="pb"></i></div>
+      </div>
+      <div class="menu-list">
+        <a href="index.html">סקירת היחידה</a>
+        <a href="chapter-1.html" data-lesson="3-1">מהי מערכת הפעלה?</a>
+        <a href="chapter-2.html" data-lesson="3-2">מערכות ההפעלה הנפוצות</a>
+        <a href="chapter-3.html" data-lesson="3-3">דרכים להתקנת מערכת הפעלה</a>
+        <a href="chapter-4.html" data-lesson="3-4">ממשקי ניהול של Windows</a>
+        <a href="chapter-5.html" data-lesson="3-5" aria-current="page">Registry</a>
+        <a href="chapter-6.html" data-lesson="3-6">שימוש בפקודות ב-Windows</a>
+        <a href="chapter-7.html" data-lesson="3-7">פקודות נפוצות ב-CMD</a>
+        <a href="chapter-8.html" data-lesson="3-8">פקודות שימושיות בארגון</a>
+        <a href="chapter-9.html" data-lesson="3-9">פרופיל משתמש</a>
+        <a href="chapter-10.html" data-lesson="3-10">בדיקת ידע</a>
+      </div>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <section class="hero slim">
+        <p class="hero-sub">יחידה 3 · פרק 5 מתוך 10</p>
+        <h1><span lang="en">Registry</span></h1>
+      </section>
+
+      <section class="card">
+        <h2><span lang="en">Registry</span></h2>
+        <p>ה-<span lang="en">Registry</span> במחשב הוא מאגר מידע מרכזי שבו מאוחסנות ונשמרות רשומות, תצורות והגדרות מערכת שונות.</p>
+    <p>ה-<span lang="en">Registry</span> הוא מסד נתונים שמכיל מידע על כלל התוכניות, המכשירים וההגדרות במערכת ההפעלה.</p>
+    <p>ה-<span lang="en">Registry</span> במערכת <span lang="en">Windows</span>, לדוגמה, מכיל מידע על הרישומים של המשתמשים, התוכנות שמותקנות במחשב, התצורה של המערכת, ההגדרות של המכשירים ועוד.</p>
+    <p>כל אפליקציה וכל רכיב במערכת עשוי להשתמש ב-<span lang="en">Registry</span> כדי לשמור את הגדרות ההפעלה, הגדרות משתמש ומידע טכני נוסף.</p>
+    <p class="warn"><strong>שימו לב:</strong> שינויים שגויים או לא נכונים ב-<span lang="en">Registry</span> עשויים לגרום לתקלות ולבעיות במערכת ההפעלה. לכן חשוב להתייחס ל-<span lang="en">Registry</span> בזהירות, ולא לבצע בו שינויים אלא אם יש לך ידע מתאים וניסיון בתחום.</p>
+    <p>נפתח את הממשק דרך תפריט התחל, בהקלדת <span lang="en">Registry Editor</span>.</p>
+      </section>
+      <section class="card">
+        <h2>מבנה ה-<span lang="en">Registry</span></h2>
+        <div class="split split-md">
+          <div class="split-text">
+            <p>ה-<span lang="en">Registry</span> מאורגן במבנה של עץ המורכב מ-<span lang="en">Keys</span> ו-<span lang="en">Values</span>. כל מפתח או תת-מפתח מייצג קבוצה של הגדרות.</p>
+            <p>מבנה העץ מתחיל ב-5 <span lang="en">Root Keys</span> קבועים:</p>
+            <ul class="plain keys"><li><strong><bdi lang="en">HKEY_CLASSES_ROOT</bdi></strong> – מכיל מידע על הרישומים של סוגי קבצים והקשרים ביניהם</li><li><strong><bdi lang="en">HKEY_CURRENT_USER</bdi></strong> – מכיל את ההגדרות של המשתמש הנוכחי שמחובר למערכת</li><li><strong><bdi lang="en">HKEY_LOCAL_MACHINE</bdi></strong> – מכיל את ההגדרות הכלליות של המערכת והתוכנות</li><li><strong><bdi lang="en">HKEY_USERS</bdi></strong> – מכיל את ההגדרות של כל המשתמשים שמחוברים למערכת</li><li><strong><bdi lang="en">HKEY_CURRENT_CONFIG</bdi></strong> – מכיל מידע על תצורת החומרה של המחשב</li></ul>
+          </div>
+          <figure class="bios"><svg class="bios-svg" viewBox="0 0 400 300" role="img" aria-label="איור של עץ ה-Registry עם חמשת מפתחות השורש מסומנים במסגרת" focusable="false"><rect width="400" height="300" fill="#f7f9fd"/><rect x="8" y="8" width="384" height="284" rx="8" fill="#ffffff" stroke="#b7c2d2" stroke-width="2"/><path d="M8 16a8 8 0 0 1 8-8h368a8 8 0 0 1 8 8v22H8z" fill="#e1ebfb"/><text x="20" y="30" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#00255d" text-anchor="start">Registry Editor</text><g fill="#8a96ad"><rect x="338" y="22" width="10" height="2"/><rect x="356" y="18" width="9" height="9" fill="none" stroke="#8a96ad" stroke-width="1.5"/><path d="M372 18l9 9M381 18l-9 9" stroke="#8a96ad" stroke-width="1.5"/></g><path d="M8 68h384" stroke="#d4dbe8" stroke-width="2"/><text x="20" y="60" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#2b3340" text-anchor="start">File</text><text x="52" y="60" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#2b3340" text-anchor="start">Edit</text><text x="88" y="60" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#2b3340" text-anchor="start">View</text><text x="128" y="60" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#2b3340" text-anchor="start">Favorites</text><text x="186" y="60" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#2b3340" text-anchor="start">Help</text><rect x="12" y="72" width="196" height="212" fill="#f7f9fd"/><text x="24" y="92" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#00255d" text-anchor="start">Computer</text><rect x="26" y="98" width="176" height="146" rx="6" fill="none" stroke="#b4501e" stroke-width="3"/><path d="M38 112l4 4-4 4" fill="none" stroke="#5b6780" stroke-width="1.6"/><path d="M48 111h7l2 3h9v10h-18z" fill="#e0b84c"/><text x="74" y="121" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="400" fill="#2b3340" text-anchor="start">HKEY_CLASSES_ROOT</text><rect x="32" y="134" width="164" height="22" fill="#cfe0fb"/><path d="M38 140l4 4-4 4" fill="none" stroke="#5b6780" stroke-width="1.6"/><path d="M48 139h7l2 3h9v10h-18z" fill="#e0b84c"/><text x="74" y="149" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" fill="#00255d" text-anchor="start">HKEY_CURRENT_USER</text><path d="M38 168l4 4-4 4" fill="none" stroke="#5b6780" stroke-width="1.6"/><path d="M48 167h7l2 3h9v10h-18z" fill="#e0b84c"/><text x="74" y="177" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="400" fill="#2b3340" text-anchor="start">HKEY_LOCAL_MACHINE</text><path d="M38 196l4 4-4 4" fill="none" stroke="#5b6780" stroke-width="1.6"/><path d="M48 195h7l2 3h9v10h-18z" fill="#e0b84c"/><text x="74" y="205" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="400" fill="#2b3340" text-anchor="start">HKEY_USERS</text><path d="M38 224l4 4-4 4" fill="none" stroke="#5b6780" stroke-width="1.6"/><path d="M48 223h7l2 3h9v10h-18z" fill="#e0b84c"/><text x="74" y="233" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="400" fill="#2b3340" text-anchor="start">HKEY_CURRENT_CONFIG</text><path d="M214 72v212" stroke="#d4dbe8" stroke-width="2"/><text x="226" y="92" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#5b6780" text-anchor="start">Name</text><text x="320" y="92" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#5b6780" text-anchor="start">Type</text><path d="M218 100h168" stroke="#d4dbe8" stroke-width="2"/><rect x="226" y="108" width="12" height="14" rx="2" fill="#5b8fe8"/><text x="244" y="120" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#2b3340" text-anchor="start">(Default)</text><text x="320" y="120" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6780" text-anchor="start">REG_SZ</text></svg></figure>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
+  <div class="dock">
+    <div class="dock-in">
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <div class="foot" role="group" aria-label="ניווט בין פרקים">
+        <a class="btn ghost prev" href="chapter-4.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> הפרק הקודם</a>
+        <a class="btn ghost next" href="chapter-6.html">הפרק הבא <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <button type="button" class="btn mark" data-lesson="3-5" aria-pressed="false">סימון כהושלם</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../js/icons.js"></script>
+  <script src="../../js/progress.js"></script>
+</body>
+</html>

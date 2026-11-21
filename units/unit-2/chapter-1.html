@@ -18,27 +18,85 @@
   <div class="shell">
     <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
     <nav class="side-menu" aria-label="פרקי היחידה">
-      <div class="prog" data-module="2" data-lessons="3">
+      <div class="prog" data-module="2" data-lessons="12">
         <span id="pt" aria-live="polite"></span>
-        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><i id="pb"></i></div>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0"><i id="pb"></i></div>
       </div>
       <div class="menu-list">
         <a href="index.html">סקירת היחידה</a>
         <a href="chapter-1.html" data-lesson="2-1" aria-current="page">רכיבי המחשב</a>
-        <a href="chapter-2.html" data-lesson="2-2">תפקיד כל רכיב</a>
-        <a href="chapter-3.html" data-lesson="2-3">בדיקת ידע</a>
+        <a href="chapter-2.html" data-lesson="2-2">מיינו את הרכיבים</a>
+        <a href="chapter-3.html" data-lesson="2-3">סקירת מארז המחשב</a>
+        <a href="chapter-4.html" data-lesson="2-4">אמצעי אחסון</a>
+        <a href="chapter-5.html" data-lesson="2-5">לוח אם</a>
+        <a href="chapter-6.html" data-lesson="2-6">מעבד (CPU)</a>
+        <a href="chapter-7.html" data-lesson="2-7">זיכרון במחשב</a>
+        <a href="chapter-8.html" data-lesson="2-8">היררכיית זיכרון</a>
+        <a href="chapter-9.html" data-lesson="2-9">תרגול: היררכיית זיכרון</a>
+        <a href="chapter-10.html" data-lesson="2-10">BIOS</a>
+        <a href="chapter-11.html" data-lesson="2-11">UEFI</a>
+        <a href="chapter-12.html" data-lesson="2-12">תרגול: BIOS ו-UEFI</a>
       </div>
     </nav>
 
     <main id="main" tabindex="-1">
       <section class="hero slim">
-        <p class="hero-sub">יחידה 2 · פרק 1 מתוך 3</p>
+        <p class="hero-sub">יחידה 2 · פרק 1 מתוך 12</p>
         <h1>רכיבי המחשב</h1>
       </section>
 
       <section class="card">
-        <h2>תוכן הפרק</h2>
-        <div class="ph">כאן יופיע תוכן הפרק.</div>
+        <h2>מהו מחשב?</h2>
+        <p><b>מחשב = מכונת חישוב.</b> מערכת אלקטרונית שקוראת נתונים ממקור קלט, מעבדת אותם ומציגה כפלט את התוצאה.</p>
+        <p>מערכת המחשב מתבססת על שני סוגי רכיבים:</p>
+        <ul class="plain">
+          <li><b>רכיבי חומרה</b> – רכיבים פיזיים (אלקטרוניים ומכניים).</li>
+          <li><b>רכיבי תוכנה</b> – קטעי קוד שמפעילים את החומרה.</li>
+        </ul>
+      </section>
+
+      <section class="card hs" data-lesson="2-1">
+        <h2>הכירו את רכיבי המחשב</h2>
+        <p class="hint">לחצו על כל נקודה בתמונה כדי לקרוא על הרכיב.</p>
+        <div class="hs-stage">
+          <svg class="hs-svg" viewBox="0 0 640 400" role="img" aria-label="איור של מחשב שולחני: מסך, מארז, מקלדת ועכבר" focusable="false">
+            <rect width="640" height="400" fill="#f7f9fd"/>
+            <ellipse cx="320" cy="372" rx="280" ry="14" fill="#dae1ed"/>
+            <!-- מסך -->
+            <rect x="40" y="30" width="340" height="238" rx="14" fill="#1b2433"/>
+            <rect x="56" y="44" width="308" height="190" rx="4" fill="#2f4a8a"/>
+            <rect x="72" y="60" width="78" height="52" rx="4" fill="#8cc4ff"/>
+            <rect x="160" y="60" width="78" height="52" rx="4" fill="#e8f0fe"/>
+            <rect x="248" y="60" width="100" height="52" rx="4" fill="#5b8fe8"/>
+            <rect x="72" y="122" width="166" height="52" rx="4" fill="#5b8fe8"/>
+            <rect x="248" y="122" width="100" height="52" rx="4" fill="#8cc4ff"/>
+            <rect x="72" y="184" width="276" height="34" rx="4" fill="#e8f0fe"/>
+            <rect x="196" y="268" width="28" height="42" fill="#3a4659"/>
+            <rect x="150" y="306" width="120" height="12" rx="6" fill="#3a4659"/>
+            <!-- מארז -->
+            <rect x="440" y="24" width="150" height="320" rx="12" fill="#2a3446"/>
+            <rect x="456" y="44" width="118" height="22" rx="4" fill="#3d4a60"/>
+            <rect x="456" y="76" width="118" height="22" rx="4" fill="#3d4a60"/>
+            <rect x="456" y="180" width="118" height="40" rx="4" fill="#3d4a60"/>
+            <circle cx="515" cy="270" r="15" fill="#5b6780"/><circle cx="515" cy="270" r="7" fill="#1b2433"/>
+            <g stroke="#5b6780" stroke-width="3" stroke-linecap="round"><path d="M462 310h106M462 320h106M462 330h106"/></g>
+            <!-- מקלדת -->
+            <rect x="60" y="334" width="290" height="36" rx="8" fill="#3a4659"/>
+            <g fill="#8a96ad"><rect x="72" y="342" width="30" height="8" rx="2"/><rect x="108" y="342" width="30" height="8" rx="2"/><rect x="144" y="342" width="30" height="8" rx="2"/><rect x="180" y="342" width="30" height="8" rx="2"/><rect x="216" y="342" width="30" height="8" rx="2"/><rect x="252" y="342" width="30" height="8" rx="2"/><rect x="288" y="342" width="50" height="8" rx="2"/><rect x="100" y="354" width="150" height="8" rx="2"/></g>
+            <!-- עכבר -->
+            <rect x="388" y="330" width="32" height="44" rx="15" fill="#3a4659"/>
+            <path d="M404 332v16" stroke="#8a96ad" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <button type="button" class="hs-pt" data-id="software" style="left:21%;top:24%" aria-label="רכיבי תוכנה" aria-pressed="false"><span class="hs-dot" aria-hidden="true"></span></button><button type="button" class="hs-pt" data-id="output" style="left:33%;top:68%" aria-label="התקני פלט" aria-pressed="false"><span class="hs-dot" aria-hidden="true"></span></button><button type="button" class="hs-pt" data-id="hardware" style="left:80%;top:40%" aria-label="רכיבי חומרה" aria-pressed="false"><span class="hs-dot" aria-hidden="true"></span></button><button type="button" class="hs-pt" data-id="input" style="left:30%;top:88%" aria-label="התקני קלט" aria-pressed="false"><span class="hs-dot" aria-hidden="true"></span></button><button type="button" class="hs-pt" data-id="input" style="left:63.5%;top:88%" aria-label="התקני קלט" aria-pressed="false"><span class="hs-dot" aria-hidden="true"></span></button>
+        </div>
+        <dialog class="dlg" aria-labelledby="hsT">
+          <div class="dlg-in">
+            <div class="dlg-head"><span class="ic dlg-ic" data-for="software" hidden><i class="bi bi-window" aria-hidden="true"></i></span><span class="ic dlg-ic" data-for="hardware" hidden><i class="bi bi-cpu" aria-hidden="true"></i></span><span class="ic dlg-ic" data-for="input" hidden><i class="bi bi-keyboard" aria-hidden="true"></i></span><span class="ic dlg-ic" data-for="output" hidden><i class="bi bi-display" aria-hidden="true"></i></span><h3 id="hsT"></h3><button type="button" class="x" aria-label="סגירה"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+            <div class="dlg-body"></div>
+            <div class="dlg-foot dlg-foot-empty" aria-hidden="true"></div>
+          </div>
+        </dialog>
+        <template id="hs-software" data-title="רכיבי תוכנה"><p>קטעי קוד שמפעילים את החומרה: מערכת ההפעלה, יישומים ותוכנות. התוכנה היא מה שאנחנו רואים ומפעילים על המסך, ובלעדיה החומרה לא יודעת מה לעשות.</p></template><template id="hs-hardware" data-title="רכיבי חומרה"><p>הרכיבים הפיזיים של המחשב, אלקטרוניים ומכניים: מעבד, זיכרון, דיסק קשיח, לוח אם ומקור כוח. רובם נמצאים בתוך מארז המחשב.</p></template><template id="hs-input" data-title="התקני קלט"><p>התקנים שדרכם המשתמש מזין נתונים ופקודות למחשב. הנפוצים הם המקלדת והעכבר.</p></template><template id="hs-output" data-title="התקני פלט"><p>התקנים שמציגים את תוצאות העיבוד למשתמש. הנפוץ ביותר הוא המסך.</p></template>
       </section>
     </main>
 
@@ -47,11 +105,11 @@
   <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
   <div class="dock">
     <div class="dock-in">
-      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
       <div class="foot" role="group" aria-label="ניווט בין פרקים">
-        <a class="btn ghost prev" href="index.html"><span aria-hidden="true">→</span> סקירת היחידה</a>
-        <a class="btn ghost next" href="chapter-2.html">הפרק הבא <span aria-hidden="true">←</span></a>
-        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <a class="btn ghost prev" href="index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> סקירת היחידה</a>
+        <a class="btn ghost next" href="chapter-2.html">הפרק הבא <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
         <button type="button" class="btn mark" data-lesson="2-1" aria-pressed="false">סימון כהושלם</button>
       </div>
     </div>
@@ -59,5 +117,6 @@
 
   <script src="../../js/icons.js"></script>
   <script src="../../js/progress.js"></script>
+  <script src="../../js/hotspots.js"></script>
 </body>
 </html>

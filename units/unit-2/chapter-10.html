@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>BIOS | יחידה 2 | הכשרת נציגי HELPDESK</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+  <a class="skip" href="#main">דילוג לתוכן הראשי</a>
+  <header class="site-header">
+    <a href="../../index.html">הכשרת נציגי HELPDESK</a>
+  </header>
+
+  <div class="shell">
+    <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
+    <nav class="side-menu" aria-label="פרקי היחידה">
+      <div class="prog" data-module="2" data-lessons="12">
+        <span id="pt" aria-live="polite"></span>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0"><i id="pb"></i></div>
+      </div>
+      <div class="menu-list">
+        <a href="index.html">סקירת היחידה</a>
+        <a href="chapter-1.html" data-lesson="2-1">רכיבי המחשב</a>
+        <a href="chapter-2.html" data-lesson="2-2">מיינו את הרכיבים</a>
+        <a href="chapter-3.html" data-lesson="2-3">סקירת מארז המחשב</a>
+        <a href="chapter-4.html" data-lesson="2-4">אמצעי אחסון</a>
+        <a href="chapter-5.html" data-lesson="2-5">לוח אם</a>
+        <a href="chapter-6.html" data-lesson="2-6">מעבד (CPU)</a>
+        <a href="chapter-7.html" data-lesson="2-7">זיכרון במחשב</a>
+        <a href="chapter-8.html" data-lesson="2-8">היררכיית זיכרון</a>
+        <a href="chapter-9.html" data-lesson="2-9">תרגול: היררכיית זיכרון</a>
+        <a href="chapter-10.html" data-lesson="2-10" aria-current="page">BIOS</a>
+        <a href="chapter-11.html" data-lesson="2-11">UEFI</a>
+        <a href="chapter-12.html" data-lesson="2-12">תרגול: BIOS ו-UEFI</a>
+      </div>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <section class="hero slim">
+        <p class="hero-sub">יחידה 2 · פרק 10 מתוך 12</p>
+        <h1><span lang="en">BIOS</span></h1>
+      </section>
+
+      <section class="card">
+        <h2><span lang="en">BIOS – Basic Input/Output System</span></h2>
+        <div class="split">
+          <div class="split-text">
+        <p>מנגנון של חומרה וקושחה (תוכנה הצרובה בחומרה) המשמש לאתחול המחשב. ה-<span lang="en">BIOS</span> מבצע מגוון משימות כמו:</p>
+        <ul class="check"><li>זיהוי התקני חומרה</li><li>קביעת הגדרות חומרה בסיסיות</li><li>קביעת סדר סריקת התקני האחסון</li><li>בדיקה בסיסית של תקינות החומרה</li><li>טעינת רשימה של פונקציות מהדיסק הקשיח</li><li>הרצה של פונקציות שממשיכות לפעול גם כשהמחשב כבוי</li></ul>
+        <p>ה-<span lang="en">BIOS</span> נמצא בשבב המותקן על לוח האם של המחשב, והוא התוכנה הראשונה שפועלת בעת הדלקת המחשב.</p>
+        <p>כדי שהתוכנה תעבוד, על לוח האם מותקנת סוללה מיוחדת הנקראת <span lang="en">CMOS</span>, שצריכה להיות תמיד טעונה על מנת לאפשר לתוכנת ה-<span lang="en">BIOS</span> לעבוד.</p>
+      </div>
+          <figure class="bios">
+          <svg class="bios-svg" viewBox="0 0 640 400" role="img" aria-label="איור של מסך הגדרות BIOS: תפריט כחול עם אפשרויות כמו שמירה ויציאה" focusable="false">
+            <rect width="640" height="400" fill="#0b1fa8"/>
+            <rect x="12" y="12" width="616" height="376" fill="none" stroke="#ffffff" stroke-width="3"/>
+            <g font-family="Courier New, monospace" font-weight="700">
+              <text x="320" y="52" fill="#ffff66" font-size="22" text-anchor="middle">BIOS SETUP UTILITY</text>
+              <path d="M12 68h616" stroke="#ffffff" stroke-width="3"/>
+              <text x="170" y="118" fill="#ffffff" font-size="20">Fail-Safe Defaults</text><text x="170" y="158" fill="#ffffff" font-size="20">Load Optimized Defaults</text><text x="170" y="198" fill="#ffffff" font-size="20">Set Supervisor Password</text><text x="170" y="238" fill="#ffffff" font-size="20">Set User Password</text><rect x="150" y="256" width="340" height="30" fill="#c8102e"/><text x="170" y="278" fill="#ffffff" font-size="20">Save &amp; Exit Setup</text><text x="170" y="318" fill="#ffffff" font-size="20">Exit Without Saving</text>
+              <path d="M12 340h616" stroke="#ffffff" stroke-width="3"/>
+              <text x="40" y="368" fill="#ffff66" font-size="17">Select Item</text>
+              <text x="340" y="368" fill="#ffff66" font-size="17">F10 : Save &amp; Exit</text>
+            </g>
+          </svg>
+          <figcaption>המראה של תפריט ה-<span lang="en">BIOS</span> עשוי להיות שונה מיצרן ליצרן.</figcaption>
+        </figure>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
+  <div class="dock">
+    <div class="dock-in">
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <div class="foot" role="group" aria-label="ניווט בין פרקים">
+        <a class="btn ghost prev" href="chapter-9.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> הפרק הקודם</a>
+        <a class="btn ghost next" href="chapter-11.html">הפרק הבא <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <button type="button" class="btn mark" data-lesson="2-10" aria-pressed="false">סימון כהושלם</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../js/icons.js"></script>
+  <script src="../../js/progress.js"></script>
+</body>
+</html>

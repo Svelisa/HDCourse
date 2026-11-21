@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>אמצעי אחסון | יחידה 2 | הכשרת נציגי HELPDESK</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+  <a class="skip" href="#main">דילוג לתוכן הראשי</a>
+  <header class="site-header">
+    <a href="../../index.html">הכשרת נציגי HELPDESK</a>
+  </header>
+
+  <div class="shell">
+    <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
+    <nav class="side-menu" aria-label="פרקי היחידה">
+      <div class="prog" data-module="2" data-lessons="12">
+        <span id="pt" aria-live="polite"></span>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0"><i id="pb"></i></div>
+      </div>
+      <div class="menu-list">
+        <a href="index.html">סקירת היחידה</a>
+        <a href="chapter-1.html" data-lesson="2-1">רכיבי המחשב</a>
+        <a href="chapter-2.html" data-lesson="2-2">מיינו את הרכיבים</a>
+        <a href="chapter-3.html" data-lesson="2-3">סקירת מארז המחשב</a>
+        <a href="chapter-4.html" data-lesson="2-4" aria-current="page">אמצעי אחסון</a>
+        <a href="chapter-5.html" data-lesson="2-5">לוח אם</a>
+        <a href="chapter-6.html" data-lesson="2-6">מעבד (CPU)</a>
+        <a href="chapter-7.html" data-lesson="2-7">זיכרון במחשב</a>
+        <a href="chapter-8.html" data-lesson="2-8">היררכיית זיכרון</a>
+        <a href="chapter-9.html" data-lesson="2-9">תרגול: היררכיית זיכרון</a>
+        <a href="chapter-10.html" data-lesson="2-10">BIOS</a>
+        <a href="chapter-11.html" data-lesson="2-11">UEFI</a>
+        <a href="chapter-12.html" data-lesson="2-12">תרגול: BIOS ו-UEFI</a>
+      </div>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <section class="hero slim">
+        <p class="hero-sub">יחידה 2 · פרק 4 מתוך 12</p>
+        <h1>אמצעי אחסון</h1>
+      </section>
+
+      <section class="card">
+        <h2>אמצעי אחסון</h2>
+        <p>אמצעי אחסון משמשים לשמירת מידע לטווח ארוך, גם כשהמחשב כבוי.</p>
+      </section>
+
+      <section class="card tabs" data-lesson="2-4">
+        <h2>סוגי אמצעי אחסון</h2>
+        <p class="hint">עברו בין הלשוניות לקבלת מידע נוסף.</p>
+        <div role="tablist" class="tab-list" aria-label="סוגי אמצעי אחסון"><button type="button" role="tab" class="tab" id="tab-hdd" aria-controls="pan-hdd" aria-selected="true" tabindex="0"><span lang="en">Hard disk drive</span></button><button type="button" role="tab" class="tab" id="tab-ssd" aria-controls="pan-ssd" aria-selected="false" tabindex="-1"><span lang="en">Solid state drive</span></button><button type="button" role="tab" class="tab" id="tab-m2" aria-controls="pan-m2" aria-selected="false" tabindex="-1"><span lang="en">M.2</span></button><button type="button" role="tab" class="tab" id="tab-more" aria-controls="pan-more" aria-selected="false" tabindex="-1">אמצעי אחסון נוספים</button></div>
+        <div role="tabpanel" class="tab-panel" id="pan-hdd" aria-labelledby="tab-hdd" tabindex="0"><div class="split"><div class="split-text"><h3>כונן דיסק קשיח – <span lang="en">HDD</span></h3><p>הוא סוג של תקליט מכני המשמש לאחסון נתונים במחשבים.</p><p>ה-<span lang="en">HDD</span> מסתובב במהירות גבוהה בתוך תיבה אטומה ממנית. הדיסק מחולק למספר כוננים פיזיים עם קצוות מגנטיים, המכונים "סקטורים", והנתונים מאוחסנים באמצעות קריאה וכתיבה של מגעים מכניים.</p><h4>יתרונות</h4><ul class="check"><li>מחיר נמוך לכל ג׳יגה-בייט</li><li>קיבולת אחסון גדולה</li></ul><h4>חסרונות</h4><ul class="cons"><li>רגיש לתנודות פיזיות, שוקים חשמליים ופגיעות מגנטיות</li><li>איטי יחסית בגלל חלקים מכניים</li><li>חלוקה של הקבצים לרישום בסקטורים (אותו קובץ מחולק ומפוזר בסקטורים שונים)</li><li>צריכת חשמל גבוהה יחסית</li><li>מרעיש וכבד</li></ul></div><figure class="bios"><svg class="bios-svg" viewBox="130 20 490 360" role="img" aria-label="איור של כונן דיסק קשיח פתוח: צלחות, ציר וזרוע קריאה וכתיבה" focusable="false"><rect x="0" y="0" width="640" height="400" fill="#f7f9fd"/>
+<rect x="150" y="30" width="460" height="340" rx="14" fill="#5b6780"/><rect x="162" y="42" width="436" height="316" rx="8" fill="#8a96ad"/>
+<circle cx="350" cy="190" r="125" fill="#e8f0fe" stroke="#c9d2dc" stroke-width="3"/><circle cx="350" cy="190" r="95" fill="#d4dbe8"/><circle cx="350" cy="190" r="22" fill="#5b6780"/><circle cx="350" cy="190" r="9" fill="#e8f0fe"/>
+<path d="M545 300L378 210" stroke="#3a4659" stroke-width="12" stroke-linecap="round"/><circle cx="545" cy="300" r="26" fill="#3a4659"/><circle cx="545" cy="300" r="9" fill="#e8f0fe"/><rect x="368" y="198" width="26" height="14" rx="3" fill="#0b1fa8" transform="rotate(30 381 205)"/></svg></figure></div></div><div role="tabpanel" class="tab-panel" id="pan-ssd" aria-labelledby="tab-ssd" tabindex="0" hidden><div class="split"><div class="split-text"><h3>כונן שבבי – <span lang="en">SSD</span></h3><p>כונן זה מבוסס על שבבים ואינו מכיל חלקים מכאניים נעים.</p><p>ב-<span lang="en">SSD</span> הנתונים נכתבים ונקראים ישירות מהזיכרון הפלאש, מה שמאפשר גישה מהירה ויעילה יותר לקבצים.</p><h4>יתרונות</h4><ul class="check"><li>עמיד יותר לנזקים מכאניים</li><li>פחות רגיש לפגיעות מגנטיות</li><li>צורך פחות חשמל</li><li>קל במשקלו</li><li>שקט יותר</li></ul><h4>חסרונות</h4><ul class="cons"><li>יקר</li><li>בעל נפח קטן יחסית</li></ul></div><figure class="bios"><svg class="bios-svg" viewBox="0 0 640 400" role="img" aria-label="איור של כונן SSD: לוח עם שבבי זיכרון ומחבר" focusable="false"><rect width="640" height="400" fill="#f7f9fd"/>
+<rect x="60" y="50" width="520" height="300" rx="16" fill="#2b2f38"/><rect x="76" y="66" width="488" height="268" rx="8" fill="#1f6f5c"/>
+<g fill="#232a36"><rect x="110" y="96" width="110" height="80" rx="6"/><rect x="240" y="96" width="110" height="80" rx="6"/><rect x="370" y="96" width="110" height="80" rx="6"/><rect x="110" y="212" width="110" height="80" rx="6"/><rect x="240" y="212" width="110" height="80" rx="6"/><rect x="370" y="212" width="110" height="80" rx="6"/></g>
+<rect x="496" y="150" width="50" height="100" rx="6" fill="#0b1fa8"/>
+<g fill="#e0b84c"><rect x="76" y="160" width="14" height="80"/></g><g stroke="#e0b84c" stroke-width="3"><path d="M110 120h110M110 236h110"/></g></svg></figure></div></div><div role="tabpanel" class="tab-panel" id="pan-m2" aria-labelledby="tab-m2" tabindex="0" hidden><div class="split"><div class="split-text"><h3><span lang="en">M.2 NVMe</span></h3><p>כונן <span lang="en">M.2 NVMe</span> הוא הכונן המהיר ביותר לצרכן הממוצע. המהירויות שהוא מסוגל להגיע אליהן גבוהות במיוחד (עד 2 ג׳יגה-בייט לשנייה).</p><p>הוא שורד יותר זמן מ-<span lang="en">SSD</span> רגיל (אפשר לכתוב ולקרוא ממנו יותר), ולכן השחיקה שלו הרבה יותר איטית.</p><p>בנוסף, הוא לא תופס מקום במארז, אלא מותקן בחריץ (סלוט) שמיועד לו בלוח האם.</p><h4>יתרונות</h4><ul class="check"><li>מהיר במיוחד</li><li>לא תופס מקום במארז ואינו דורש כבלים</li><li>שחיקה איטית</li></ul><h4>חסרונות</h4><ul class="cons"><li>יקר יחסית</li><li>דורש חריץ <span lang="en">M.2</span> בלוח האם</li><li>עלול להתחמם בעומס</li></ul></div><figure class="bios"><svg class="bios-svg" viewBox="0 0 640 400" role="img" aria-label="איור של כונן M.2 NVMe: לוח צר עם שבבים ומחבר" focusable="false"><rect width="640" height="400" fill="#f7f9fd"/>
+<rect x="60" y="140" width="520" height="120" rx="10" fill="#232a36"/>
+<rect x="60" y="140" width="46" height="120" rx="6" fill="#e0b84c"/><g stroke="#232a36" stroke-width="3"><path d="M72 150v100M84 150v100M96 150v100"/></g>
+<circle cx="560" cy="200" r="16" fill="#f7f9fd"/>
+<g fill="#5b6780"><rect x="140" y="160" width="90" height="80" rx="6"/><rect x="250" y="160" width="90" height="80" rx="6"/><rect x="360" y="160" width="90" height="80" rx="6"/></g>
+<text x="320" y="320" font-family="Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle" fill="#0f1114">M.2 NVMe</text></svg></figure></div></div><div role="tabpanel" class="tab-panel" id="pan-more" aria-labelledby="tab-more" tabindex="0" hidden><div class="split"><div class="split-text"><h3>כונן זיכרון או <span lang="en">DISK ON KEY</span></h3><p>כונן נייד בעל חיבור <span lang="en">USB</span>.</p><h4>יתרונות</h4><ul class="check"><li>נייד</li><li>יחסית קל במשקל וקטן</li><li>שרידות</li><li>אינם נדיפים</li></ul><h4>חסרונות</h4><ul class="cons"><li>נפח קטן יחסית</li><li>קל לאיבוד</li><li>ביצועים מוגבלים (מהירות העברה נמוכה יחסית לכוננים פנימיים)</li></ul></div><figure class="bios"><svg class="bios-svg" viewBox="0 0 640 400" role="img" aria-label="איור של כונן הבזק (USB) וכונן קשיח חיצוני" focusable="false"><rect width="640" height="400" fill="#f7f9fd"/>
+<g><rect x="70" y="40" width="40" height="90" rx="5" fill="#8a96ad"/><rect x="120" y="40" width="40" height="90" rx="5" fill="#8a96ad"/><rect x="62" y="124" width="106" height="196" rx="20" fill="#3a4659"/><rect x="90" y="270" width="50" height="16" rx="8" fill="#e8f0fe"/><rect x="82" y="60" width="10" height="14" fill="#232a36"/><rect x="138" y="60" width="10" height="14" fill="#232a36"/></g>
+<rect x="260" y="150" width="270" height="180" rx="20" fill="#3a4659"/><path d="M290 330c-60 20-40 50-0 40" stroke="#5b6780" stroke-width="7" fill="none" stroke-linecap="round"/><rect x="280" y="170" width="60" height="22" rx="4" fill="#5b6780"/>
+<g font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f1114"><text x="115" y="360" text-anchor="middle">USB FLASH DRIVE</text><text x="395" y="378" text-anchor="middle">EXTERNAL HARD DISK</text></g></svg></figure></div></div>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
+  <div class="dock">
+    <div class="dock-in">
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <div class="foot" role="group" aria-label="ניווט בין פרקים">
+        <a class="btn ghost prev" href="chapter-3.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> הפרק הקודם</a>
+        <a class="btn ghost next" href="chapter-5.html">הפרק הבא <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <button type="button" class="btn mark" data-lesson="2-4" aria-pressed="false">סימון כהושלם</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../js/icons.js"></script>
+  <script src="../../js/progress.js"></script>
+  <script src="../../js/tabs.js"></script>
+</body>
+</html>

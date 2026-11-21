@@ -66,7 +66,7 @@
   color: #fff;
   background: var(--hero);
   border-radius: 1.25rem;
-  border-inline-start: 0.6rem solid var(--accent);
+  border-inline-start: 0.6rem solid var(--deep);
 }
 
 .hero h1 {
@@ -173,7 +173,7 @@
   overflow: hidden;
   font-size: 1.9rem;
   color: var(--icon);
-  background: color-mix(in srgb, var(--accent) 35%, transparent);
+  background: var(--tint);
   border-radius: 50%;
 }
 
@@ -232,8 +232,8 @@
   height: 2.4rem;
   font-size: 1.2rem;      /* טקסט גדול ומודגש (WCAG) */
   font-weight: 800;
-  color: var(--on-accent); /* מספר חום-סגול על ורוד: 4.05:1, מספיק לטקסט גדול ומודגש */
-  background: var(--pop);  /* הוורוד מהפלטה */
+  color: #fff;
+  background: var(--hero);
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--bg);
 }
@@ -307,7 +307,7 @@
 }
 
 .tile:hover {
-  background: color-mix(in srgb, var(--accent) 14%, var(--bg));
+  background: var(--tint);
   border-color: var(--accent);
 }
 
@@ -429,10 +429,14 @@
   padding: 0.6rem 0.9rem;
 }
 
-.dlg-foot .pos {
-  font-size: 0.9rem;
-  color: var(--muted);
-  text-align: center;
+/* חצים עגולים במקום "הקודם" / "הבא" */
+.dlg-foot .btn.icon {
+  display: grid;
+  place-items: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  padding: 0;
+  border-radius: 50%;
 }
 
 /* ---------- ניווט בתחתית יחידה ---------- */
@@ -621,7 +625,7 @@
 }
 
 .lessons a:hover {
-  background: color-mix(in srgb, var(--accent) 14%, var(--bg));
+  background: var(--tint);
   border-color: var(--icon);
 }
 
@@ -676,7 +680,7 @@
 
   /* כפתור משני (מסגרת) */
   .btn.ghost:not(.off):not(:disabled):hover {
-    background: color-mix(in srgb, var(--accent) 22%, var(--surface));
+    background: var(--tint);
     border-color: var(--icon);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
     transform: translateY(-2px);
@@ -689,7 +693,7 @@
 
   /* כפתור סגירה בחלון */
   .dlg .x:hover {
-    background: color-mix(in srgb, var(--accent) 30%, transparent);
+    background: var(--tint);
     border-color: var(--icon);
   }
 
@@ -728,3 +732,357 @@
 .hero h1 + p {
   margin-top: 0.9rem;
 }
+
+/* אייקון בתוך כפתור לא מתכווץ */
+.btn svg {
+  flex: none;
+}
+
+/* בכותרת הכחולה הכפתור הראשי לבן עם טקסט כחול */
+.hero .btn {
+  color: var(--hero);
+  background: #fff;
+}
+
+@media (hover: hover) {
+  .hero .btn:not(:disabled):hover {
+    background: var(--tint);
+  }
+}
+
+/* חלון הפירוט: חצי הניווט וכפתור הסגירה בלי עיגול או מסגרת (אזור הלחיצה נשאר גדול) */
+.dlg-foot .btn.icon,
+.dlg .x {
+  color: var(--text);
+  background: transparent;
+  border: 0;
+  border-radius: 0.6rem;
+  box-shadow: none;
+}
+
+.dlg-foot .btn.icon svg,
+.dlg .x svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (hover: hover) {
+  .dlg-foot .btn.icon.ghost:not(:disabled):hover,
+  .dlg .x:hover {
+    color: var(--icon);
+    background: var(--tint);
+    border: 0;
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+/* כל אייקוני הכפתורים (חצים, סגירה, בית) והאייקונים באריחים: אותו עובי קו, אותם קצוות עגולים */
+.btn svg,
+.dlg .x svg {
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.dlg .x {
+  display: grid;
+  place-items: center;
+}
+
+/* ===== תרגיל גרירה: מיון תחומי אחריות ===== */
+.dd-pool,
+.dd-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.dd-pool {
+  min-height: 3.5rem;
+  padding: .75rem;
+  border: 2px dashed var(--ctl);
+  border-radius: .75rem;
+  background: var(--surface);
+  margin: 1rem 0 1.25rem;
+}
+.dd-item {
+  font: inherit;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--surface);
+  border: 1.5px solid var(--ctl);
+  border-radius: 999px;
+  min-height: 2.75rem;
+  padding: .4rem 1rem;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+.dd-item[aria-pressed="true"] {
+  background: var(--tint);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+.dd-item.dragging {
+  position: fixed;
+  z-index: 50;
+  pointer-events: none;
+  cursor: grabbing;
+  box-shadow: 0 .5rem 1.25rem rgba(0, 37, 93, .25);
+}
+.dd-item.ok { background: #e6f4ea; border-color: #0b6b2e; color: #0b4a20; cursor: default; }
+.dd-item.bad { background: #fdecea; border-color: #a4161a; color: #7a0f12; }
+.dd-bins {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.dd-bin {
+  border: 2px solid var(--line);
+  border-radius: .75rem;
+  background: var(--tint);
+  padding: .75rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  min-height: 11rem;
+}
+.dd-bin.over { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+.dd-bin h3 { margin: 0; font-size: 1.1rem; color: var(--deep); }
+.dd-bin .sub { margin: 0; color: var(--muted); font-size: .9rem; }
+.dd-place {
+  align-self: flex-start;
+  font: inherit;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--surface);
+  border: 1.5px solid var(--accent);
+  border-radius: .5rem;
+  min-height: 2.5rem;
+  padding: .3rem .9rem;
+  cursor: pointer;
+}
+.dd-place:disabled { color: var(--muted); border-color: var(--line); cursor: default; }
+.dd-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.25rem; align-items: center; }
+.dd-result { margin: 1rem 0 0; font-weight: 700; color: var(--deep); }
+@media (max-width: 700px) { .dd-bins { grid-template-columns: 1fr; } }
+@media (hover: hover) {
+  .dd-item:not(.ok):hover { border-color: var(--accent); }
+  .dd-place:not(:disabled):hover { background: var(--tint); }
+}
+
+/* ===== אינטראקציית נקודות חמות על תמונה ===== */
+.hs-stage { position: relative; max-width: 44rem; margin: 1rem auto; border: 1px solid var(--line); border-radius: .75rem; overflow: hidden; }
+.hs-svg { display: block; width: 100%; height: auto; }
+.hs-pt {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 2.75rem; height: 2.75rem;
+  padding: 0; border: 0; border-radius: 50%;
+  background: transparent; cursor: pointer;
+  display: grid; place-items: center;
+}
+.hs-dot {
+  width: 1.75rem; height: 1.75rem; border-radius: 50%;
+  background: #fff; border: 3px solid var(--accent);
+  box-shadow: 0 0 0 3px rgba(255,255,255,.85), 0 2px 6px rgba(0,37,93,.35);
+  display: grid; place-items: center;
+  color: #fff; font-weight: 800; font-size: .9rem; line-height: 1;
+}
+.hs-dot::before { content: ""; width: .5rem; height: .5rem; border-radius: 50%; background: var(--accent); }
+.hs-pt.seen .hs-dot { background: var(--accent); }
+.hs-pt.seen .hs-dot::before { content: "✓"; width: auto; height: auto; background: none; color: #fff; }
+.hs-pt[aria-pressed="true"] .hs-dot { box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--accent); }
+@media (prefers-reduced-motion: no-preference) {
+  .hs-pt:not(.seen) .hs-dot { animation: hs-pulse 2s ease-out infinite; }
+  @keyframes hs-pulse { 0% { box-shadow: 0 0 0 3px rgba(255,255,255,.85), 0 0 0 3px rgba(0,86,210,.5); } 100% { box-shadow: 0 0 0 3px rgba(255,255,255,.85), 0 0 0 14px rgba(0,86,210,0); } }
+}
+.hs-panel { min-height: 6.5rem; margin-top: 1rem; padding: 1rem 1.25rem; border-radius: .75rem; background: var(--tint); border-inline-start: 5px solid var(--accent); }
+.hs-panel h3 { margin: 0 0 .35rem; color: var(--deep); }
+.hs-panel p { margin: 0; }
+.hs-empty { color: var(--muted); }
+.plain { margin: .5rem 0 0; padding-inline-start: 1.25rem; }
+
+/* שורת תחתית ריקה בפופאפ ללא חצים – שומרת על אותו מראה ואותם מרווחים */
+.dlg-foot-empty { display: none; }
+.dd-item svg { width: 1.25rem; height: 1.25rem; vertical-align: -.25rem; margin-inline-end: .25rem; stroke-width: 1.8; }
+
+/* ===== לשוניות (tabs) ===== */
+.tab-list { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0 0; }
+.tab {
+  font: inherit; font-weight: 700; color: var(--text);
+  background: var(--surface); border: 1.5px solid var(--ctl);
+  border-radius: .75rem .75rem 0 0; border-bottom: 0;
+  min-height: 3rem; padding: .5rem 1.1rem; cursor: pointer;
+}
+.tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.tab.seen:not([aria-selected="true"])::after { content: " ✓"; color: var(--accent); }
+.tab-panel { border: 1.5px solid var(--accent); border-radius: 0 .75rem .75rem .75rem; background: var(--surface); padding: 1.1rem 1.25rem; }
+.tab-panel h3 { margin: 0 0 .5rem; color: var(--deep); }
+.tab-panel p { margin: 0 0 .75rem; }
+.tab-panel ul { margin: 0; padding-inline-start: 1.25rem; }
+.tab-panel h4 { margin: 0 0 .25rem; color: var(--deep); }
+.tab-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; }
+@media (hover: hover) { .tab[aria-selected="false"]:hover { background: var(--tint); border-color: var(--accent); } }
+
+/* ===== טבלת השוואה ומקום שמור לסרטון ===== */
+.cmp { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+.cmp th, .cmp td { padding: .6rem .8rem; text-align: start; border: 1px solid var(--line); }
+.cmp thead th { background: var(--accent); color: var(--on-accent); }
+.cmp tbody th { background: var(--tint); color: var(--deep); width: 28%; }
+.video-ph {
+  aspect-ratio: 16 / 9; max-width: 44rem; margin: 1rem auto 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .5rem;
+  text-align: center; color: var(--deep); background: var(--tint);
+  border: 2px dashed var(--accent); border-radius: .75rem; padding: 1rem;
+}
+.video-ph p { margin: 0; }
+
+/* ===== רשימת סימון ואיור BIOS ===== */
+.check { list-style: none; margin: .5rem 0 1rem; padding: 0; }
+.check li { position: relative; padding-inline-start: 1.9rem; margin: .35rem 0; }
+.check li::before { content: "✓"; position: absolute; inset-inline-start: 0; color: var(--accent); font-weight: 800; }
+.bios { margin: 1rem auto 0; max-width: 40rem; }
+.bios-svg { direction: ltr; display: block; width: 100%; height: auto; border-radius: .6rem; border: 1px solid var(--line); }
+.bios figcaption { margin-top: .6rem; text-align: center; color: var(--muted); }
+
+/* ===== מסך מפוצל: טקסט מימין, תמונה משמאל (במובייל: זה מתחת לזה) ===== */
+.split { display: grid; grid-template-columns: 1.15fr 1fr; gap: 1.5rem; align-items: center; }
+.split .bios { margin: 0; max-width: none; }
+.split-text > :first-child { margin-top: 0; }
+@media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
+
+/* רשימת חסרונות */
+.cons { list-style: none; margin: .25rem 0 .75rem; padding: 0; }
+.cons li { position: relative; padding-inline-start: 1.9rem; margin: .35rem 0; }
+.cons li::before { content: "–"; position: absolute; inset-inline-start: .2rem; color: var(--muted); font-weight: 800; }
+.tab-panel .split-text h4 { margin: .75rem 0 .15rem; }
+.tab-panel .bios { max-width: none; }
+
+/* תמונה בראש פופאפ */
+.dlg-fig { margin: 0 0 .85rem; }
+.dlg-fig svg { display: block; width: 100%; height: auto; border-radius: .6rem; }
+.dlg-body ul.check { margin: .5rem 0 0; }
+
+/* לשוניות בשורה אחת + תמונה קטנה (פרק המעבד) */
+.tab-list.one-row { flex-wrap: nowrap; gap: .3rem; }
+.tab-list.one-row .tab { flex: 1 1 0; min-width: 0; padding: .5rem .35rem; font-size: .95rem; line-height: 1.25; }
+.split.split-sm { grid-template-columns: 1fr 13rem; }
+.split.split-sm .bios { max-width: 13rem; }
+@media (max-width: 860px) {
+  .tab-list.one-row { overflow-x: auto; }
+  .tab-list.one-row .tab { flex: 0 0 auto; padding: .5rem .9rem; }
+  .split.split-sm { grid-template-columns: 1fr; }
+  .split.split-sm .bios { max-width: 12rem; margin-inline: auto; }
+}
+
+/* ===== תרגול רב-ברירה ===== */
+.qz-q { border: 1.5px solid var(--ctl); border-radius: .75rem; padding: .9rem 1.1rem; margin: 0 0 .9rem; background: var(--surface); }
+.qz-q legend { font-weight: 700; color: var(--deep); padding: 0 .35rem; }
+.qz-q label { display: flex; align-items: center; gap: .6rem; padding: .4rem .25rem; cursor: pointer; }
+.qz-q input { width: 1.15rem; height: 1.15rem; accent-color: var(--accent); }
+.qz-fb { margin: .4rem 0 0; min-height: 1.2em; }
+.qz-q.good { border-color: var(--accent); background: var(--tint); }
+.qz-q.bad { border-color: var(--deep); border-style: dashed; }
+.qz-actions { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+.qz-result { margin: .75rem 0 0; font-weight: 700; color: var(--deep); }
+.video-wrap { aspect-ratio: 16 / 9; max-width: 44rem; margin: 1rem auto 0; border-radius: .75rem; overflow: hidden; background: #000; }
+.video-wrap iframe { display: block; width: 100%; height: 100%; border: 0; }
+
+/* ===== סרטון אינטראקטיבי ===== */
+.iv-player-box { aspect-ratio: 16 / 9; max-width: 44rem; margin: 1rem auto 0; border-radius: .75rem; overflow: hidden; background: #000; }
+.iv-player-box iframe { display: block; width: 100%; height: 100%; border: 0; }
+.iv-status { max-width: 44rem; margin: .75rem auto 0; font-weight: 700; color: var(--deep); }
+.iv-steps { max-width: 44rem; margin: .5rem auto 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; }
+.iv-steps li { border: 1.5px solid var(--ctl); border-radius: 999px; padding: .15rem .75rem; font-size: .95rem; background: var(--surface); }
+.iv-steps li.done { border-color: var(--accent); background: var(--tint); color: var(--deep); }
+.iv-steps li.now { border-color: var(--accent); background: var(--accent); color: var(--on-accent); }
+.iv-panel { max-width: 44rem; margin: 1rem auto 0; border: 2px solid var(--accent); border-radius: .75rem; padding: 1rem 1.1rem; background: var(--surface); }
+.iv-q { border: 0; margin: 0; padding: 0; }
+.iv-q legend { font-weight: 700; color: var(--deep); padding: 0; margin-bottom: .4rem; }
+.iv-q label { display: flex; align-items: center; gap: .6rem; padding: .4rem .25rem; cursor: pointer; }
+.iv-q input { width: 1.15rem; height: 1.15rem; accent-color: var(--accent); }
+.iv-fb { margin: .5rem 0 0; min-height: 1.2em; }
+.iv-actions { display: flex; gap: .6rem; margin-top: .6rem; }
+.iv-credit { max-width: 44rem; margin: .75rem auto 0; font-size: .95rem; color: var(--muted); }
+
+/* תרגיל מיון עם ארבעה תאים */
+.dd-bins.four { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1000px) { .dd-bins.four { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) { .dd-bins.four { grid-template-columns: 1fr; } }
+
+/* מסך מפוצל עם איור בינוני */
+.split.split-md { grid-template-columns: 1fr 21rem; }
+.split.split-md .bios { max-width: 21rem; }
+.split-text p { margin: 0 0 .85rem; }
+.split-text ul.check { margin: .25rem 0 .85rem; }
+@media (max-width: 860px) {
+  .split.split-md { grid-template-columns: 1fr; }
+  .split.split-md .bios { max-width: 18rem; margin-inline: auto; }
+}
+
+/* ===== כרטיסי אייקונים עגולים שנפתחים בפופאפ ===== */
+.ic-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin: 1.25rem 0 .5rem; }
+.hs .ic-row .hs-pt {
+  position: static; transform: none; width: auto; height: auto;
+  display: flex; flex-direction: column; align-items: center; gap: .75rem;
+  padding: .5rem; border-radius: 1rem; color: var(--text); font: inherit; font-weight: 700; text-align: center;
+}
+.ic-circle { position: relative; width: 7rem; height: 7rem; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 3.2rem; box-shadow: 0 6px 16px rgba(0,37,93,.18); transition: transform .15s; }
+.ic-row .hs-pt:hover .ic-circle { transform: translateY(-3px); }
+.ic-row .hs-pt:focus-visible .ic-circle { outline: 3px solid var(--deep); outline-offset: 3px; }
+.ic-row .hs-pt.seen .ic-circle::after { content: "✓"; position: absolute; inset-block-start: -.2rem; inset-inline-start: -.2rem; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: #fff; color: #0b6b2e; border: 2px solid #0b6b2e; display: grid; place-items: center; font-size: 1.1rem; font-weight: 800; }
+.ic-circle.c1 { background: #0056d2; } .ic-circle.c2 { background: #b4501e; } .ic-circle.c3 { background: #1f6f5c; } .ic-circle.c4 { background: #7b4a9c; }
+@media (max-width: 700px) { .ic-row { grid-template-columns: repeat(2, 1fr); } .ic-circle { width: 5.5rem; height: 5.5rem; font-size: 2.6rem; } }
+
+/* הערת זהירות */
+.warn { margin: .5rem 0 .85rem; padding: .75rem 1rem; border-radius: .6rem; background: #fff6e0; border-inline-start: 5px solid #b4501e; color: #4a2a0c; }
+.keys { list-style: none; padding: 0; margin: .25rem 0 .5rem; }
+.keys li { margin: 0 0 .6rem; padding-inline-start: 1rem; border-inline-start: 3px solid var(--accent); }
+
+/* פקודות בתוך חלונות קופצים */
+.cmd-code { direction: ltr; unicode-bidi: isolate; font-family: Consolas, Menlo, "Courier New", monospace; font-size: .95em; background: var(--tint); color: var(--deep); padding: .05rem .4rem; border-radius: .3rem; white-space: nowrap; }
+.dlg-body ul.cmds { margin: .5rem 0 0; padding-inline-start: 1.25rem; }
+.dlg-body ul.cmds li { margin-bottom: .35rem; }
+.ic-group { margin: 1.5rem 0 0; font-size: 1.1rem; color: var(--deep); }
+.ic-group + .ic-row { margin-top: .75rem; }
+.ic-row.three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 700px) { .ic-row.three { grid-template-columns: repeat(2, 1fr); } }
+.split-text ol { margin: .25rem 0 .85rem; padding-inline-start: 1.5rem; }
+.split-text ol li { margin-bottom: .5rem; }
+
+/* ===== ציר זמן אנכי של שלבים (stl) ===== */
+.stl { list-style: none; margin: 1rem 0 0; padding: 0; }
+.stl li { position: relative; padding-inline-start: 4.5rem; padding-block-end: 1.75rem; min-height: 3rem; }
+.stl li:last-child { padding-block-end: 0; }
+.stl li::before { content: ""; position: absolute; inset-inline-start: calc(1.5rem - 2px); inset-block: 0; width: 4px; background: var(--line); }
+.stl li:first-child::before { inset-block-start: 1.5rem; }
+.stl li:last-child::before { inset-block-end: auto; height: 1.5rem; }
+.stl .stl-n { position: absolute; inset-inline-start: 0; inset-block-start: 0; z-index: 1; width: 3rem; height: 3rem; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-size: 1.3rem; font-weight: 800; box-shadow: 0 0 0 5px var(--surface); }
+.stl h3 { margin: .35rem 0 .3rem; font-size: 1.1rem; color: var(--deep); }
+.stl p { margin: 0; }
+
+/* ===== שני טורי השוואה ===== */
+.cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: .75rem; }
+.col-card { background: var(--tint); border-radius: .9rem; padding: 1.25rem 1.35rem; }
+.col-card h3 { display: flex; align-items: center; gap: .75rem; margin: 0 0 .85rem; font-size: 1.2rem; color: var(--deep); }
+.col-card h3 .ic { flex: none; width: 2.6rem; height: 2.6rem; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-size: 1.4rem; }
+.col-card p { margin: 0 0 .85rem; }
+.col-card p:last-child { margin-bottom: 0; }
+@media (max-width: 860px) { .cols2 { grid-template-columns: 1fr; } }
+
+/* ארבעה אריחים בשורה */
+.tiles.c4 { grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 600px) { .tiles.c4 { grid-template-columns: repeat(4, 1fr); } }
+/* אריח שנפתח דרך hotspots.js (אותו מראה כמו אריחי יחידה 1) */
+.tiles .tile.hs-pt { position: relative; transform: none; display: flex; flex-direction: column; align-items: center; gap: .6rem; width: 100%; height: 100%; padding: 1rem .6rem; border: 1.5px solid var(--ctl); border-radius: 1rem; background: var(--bg); }
+.tiles .tile.hs-pt:hover { background: var(--tint); border-color: var(--accent); }
+
+/* שלושה אריחים בשורה */
+.tiles.c3 { grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 600px) { .tiles.c3 { grid-template-columns: repeat(3, 1fr); } }
+.ic-group + .tiles { margin-top: .75rem; }
+.hs .ic-group { margin: 1.5rem 0 0; }

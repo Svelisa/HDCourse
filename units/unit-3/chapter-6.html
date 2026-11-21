@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>שימוש בפקודות ב-Windows | יחידה 3 | הכשרת נציגי HELPDESK</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+  <a class="skip" href="#main">דילוג לתוכן הראשי</a>
+  <header class="site-header">
+    <a href="../../index.html">הכשרת נציגי HELPDESK</a>
+  </header>
+
+  <div class="shell">
+    <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
+    <nav class="side-menu" aria-label="פרקי היחידה">
+      <div class="prog" data-module="3" data-lessons="10">
+        <span id="pt" aria-live="polite"></span>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><i id="pb"></i></div>
+      </div>
+      <div class="menu-list">
+        <a href="index.html">סקירת היחידה</a>
+        <a href="chapter-1.html" data-lesson="3-1">מהי מערכת הפעלה?</a>
+        <a href="chapter-2.html" data-lesson="3-2">מערכות ההפעלה הנפוצות</a>
+        <a href="chapter-3.html" data-lesson="3-3">דרכים להתקנת מערכת הפעלה</a>
+        <a href="chapter-4.html" data-lesson="3-4">ממשקי ניהול של Windows</a>
+        <a href="chapter-5.html" data-lesson="3-5">Registry</a>
+        <a href="chapter-6.html" data-lesson="3-6" aria-current="page">שימוש בפקודות ב-Windows</a>
+        <a href="chapter-7.html" data-lesson="3-7">פקודות נפוצות ב-CMD</a>
+        <a href="chapter-8.html" data-lesson="3-8">פקודות שימושיות בארגון</a>
+        <a href="chapter-9.html" data-lesson="3-9">פרופיל משתמש</a>
+        <a href="chapter-10.html" data-lesson="3-10">בדיקת ידע</a>
+      </div>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <section class="hero slim">
+        <p class="hero-sub">יחידה 3 · פרק 6 מתוך 10</p>
+        <h1>שימוש בפקודות ב-<span lang="en">Windows</span></h1>
+      </section>
+
+      <section class="card">
+        <h2>שימוש בפקודות ב-<span lang="en">Windows</span></h2>
+        <p>שימוש בפקודות לביצוע שינויים בהגדרות או טיפול בתקלות מאפשר התנהלות מהירה ויעילה יותר משימוש בממשק <span lang="en">GUI</span>.</p>
+        <p>נכיר את שני ממשקי הפקודות: <span lang="en">CMD</span> ו-<span lang="en">PowerShell</span>.</p>
+      </section>
+
+      <section class="card tabs" data-lesson="3-6">
+        <h2>ממשקי פקודות</h2>
+        <p class="hint">עברו בין הלשוניות לקבלת מידע על כל ממשק.</p>
+        <div role="tablist" class="tab-list" aria-label="ממשקי פקודות"><button type="button" role="tab" class="tab" id="tab-cmd" aria-controls="pan-cmd" aria-selected="true" tabindex="0"><span lang="en">Command Prompt</span></button><button type="button" role="tab" class="tab" id="tab-ps" aria-controls="pan-ps" aria-selected="false" tabindex="-1"><span lang="en">PowerShell</span></button></div>
+        <div role="tabpanel" class="tab-panel" id="pan-cmd" aria-labelledby="tab-cmd" tabindex="0"><div class="split split-md"><div class="split-text"><h3><span lang="en">Command Prompt</span> (<span lang="en">CMD</span>)</h3><p>מסך שחור עם פרומפט (<span lang="en">Prompt</span>) שמחכה להזנת פקודות טקסטואליות או סקריפטים.</p><p>באמצעות <span lang="en">CMD</span> ניתן לבצע פעולות כגון ניהול קבצים, הרצת תוכניות, כתיבת סקריפטים, כתיבת פקודות <span lang="en">Batch</span> ועוד.</p><p>הכלי מתאים למשתמשים בכל הרמות: משתמשים רגילים ומנהלי מערכת.</p></div><figure class="bios"><svg class="bios-svg" viewBox="0 0 400 300" role="img" aria-label="איור של חלון שורת הפקודה CMD" focusable="false"><rect width="400" height="300" fill="#f7f9fd"/><rect x="8" y="8" width="384" height="284" rx="8" fill="#0c0c0c" stroke="#b7c2d2" stroke-width="2"/><path d="M8 16a8 8 0 0 1 8-8h368a8 8 0 0 1 8 8v22H8z" fill="#3a4659"/><text x="20" y="28" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Command Prompt</text><g stroke="#ffffff" stroke-width="1.6" fill="none"><path d="M340 24h10"/><rect x="358" y="18" width="9" height="9"/><path d="M374 18l9 9M383 18l-9 9"/></g><text x="22" y="66" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">Microsoft Windows [Version 10.0]</text><text x="22" y="85" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">(c) Microsoft Corporation.</text><text x="22" y="104" font-family="Consolas, Menlo, monospace" font-size="12" fill="" xml:space="preserve"></text><text x="22" y="123" font-family="Consolas, Menlo, monospace" font-size="12" fill="#ffffff" xml:space="preserve">C:\Users\user&gt;ipconfig</text><text x="22" y="142" font-family="Consolas, Menlo, monospace" font-size="12" fill="" xml:space="preserve"></text><text x="22" y="161" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">Windows IP Configuration</text><text x="22" y="180" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">   IPv4 Address . . : 192.168.1.20</text><text x="22" y="199" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">   Subnet Mask  . . : 255.255.255.0</text><text x="22" y="218" font-family="Consolas, Menlo, monospace" font-size="12" fill="" xml:space="preserve"></text><text x="22" y="237" font-family="Consolas, Menlo, monospace" font-size="12" fill="#ffffff" xml:space="preserve">C:\Users\user&gt;dir</text><text x="22" y="256" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">   Documents   Downloads   Desktop</text><text x="22" y="275" font-family="Consolas, Menlo, monospace" font-size="12" fill="" xml:space="preserve"></text><text x="22" y="294" font-family="Consolas, Menlo, monospace" font-size="12" fill="#ffffff" xml:space="preserve">C:\Users\user&gt;_</text></svg></figure></div></div><div role="tabpanel" class="tab-panel" id="pan-ps" aria-labelledby="tab-ps" tabindex="0" hidden><div class="split split-md"><div class="split-text"><h3><span lang="en">PowerShell</span></h3><p>פלטפורמת פקודות ותסריטים מתקדמת, עם יכולות של שפת תסריטים ופקודות כמו ב-<span lang="en">Unix</span> וב-<span lang="en">Linux</span>.</p><p>היא מאפשרת למשתמשים לבצע פעולות מתקדמות בהגדרות במערכת ההפעלה, ניהול מערכת, ניהול רשומות, תקשורת עם רשתות, יצירת סקריפטים ועוד.</p><p>הפלטפורמה מספקת יכולות שקשה להשיג באמצעות פקודות ה-<span lang="en">CMD</span> הסטנדרטיות של <span lang="en">Windows</span>.</p></div><figure class="bios"><svg class="bios-svg" viewBox="0 0 400 300" role="img" aria-label="איור של חלון PowerShell" focusable="false"><rect width="400" height="300" fill="#f7f9fd"/><rect x="8" y="8" width="384" height="284" rx="8" fill="#012456" stroke="#b7c2d2" stroke-width="2"/><path d="M8 16a8 8 0 0 1 8-8h368a8 8 0 0 1 8 8v22H8z" fill="#2b3340"/><text x="20" y="28" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Windows PowerShell</text><g stroke="#ffffff" stroke-width="1.6" fill="none"><path d="M340 24h10"/><rect x="358" y="18" width="9" height="9"/><path d="M374 18l9 9M383 18l-9 9"/></g><text x="22" y="66" font-family="Consolas, Menlo, monospace" font-size="12" fill="#ffffff" xml:space="preserve">PS C:\Users\user&gt; Get-Process</text><text x="22" y="85" font-family="Consolas, Menlo, monospace" font-size="12" fill="" xml:space="preserve"></text><text x="22" y="104" font-family="Consolas, Menlo, monospace" font-size="12" fill="#eeedf0" xml:space="preserve">Handles  NPM(K)  CPU(s)  Id  ProcessName</text><text x="22" y="123" font-family="Consolas, Menlo, monospace" font-size="12" fill="#eeedf0" xml:space="preserve">-------  ------  ------  --  -----------</text><text x="22" y="142" font-family="Consolas, Menlo, monospace" font-size="12" fill="#eeedf0" xml:space="preserve">    512      28    4.12  812  chrome</text><text x="22" y="161" font-family="Consolas, Menlo, monospace" font-size="12" fill="#eeedf0" xml:space="preserve">    243      15    0.91  944  explorer</text><text x="22" y="180" font-family="Consolas, Menlo, monospace" font-size="12" fill="#eeedf0" xml:space="preserve">    118       9    0.03 1220  notepad</text><text x="22" y="199" font-family="Consolas, Menlo, monospace" font-size="12" fill="" xml:space="preserve"></text><text x="22" y="218" font-family="Consolas, Menlo, monospace" font-size="12" fill="#ffffff" xml:space="preserve">PS C:\Users\user&gt; Get-Service</text><text x="22" y="237" font-family="Consolas, Menlo, monospace" font-size="12" fill="" xml:space="preserve"></text><text x="22" y="256" font-family="Consolas, Menlo, monospace" font-size="12" fill="#eeedf0" xml:space="preserve">Status   Name       DisplayName</text><text x="22" y="275" font-family="Consolas, Menlo, monospace" font-size="12" fill="#eeedf0" xml:space="preserve">Running  Spooler    Print Spooler</text></svg></figure></div></div>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
+  <div class="dock">
+    <div class="dock-in">
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <div class="foot" role="group" aria-label="ניווט בין פרקים">
+        <a class="btn ghost prev" href="chapter-5.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> הפרק הקודם</a>
+        <a class="btn ghost next" href="chapter-7.html">הפרק הבא <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <button type="button" class="btn mark" data-lesson="3-6" aria-pressed="false">סימון כהושלם</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../js/icons.js"></script>
+  <script src="../../js/progress.js"></script>
+  <script src="../../js/tabs.js"></script>
+</body>
+</html>

@@ -18,32 +18,34 @@
   <div class="shell">
     <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
     <nav class="side-menu" aria-label="פרקי היחידה">
-      <div class="prog" data-module="4" data-lessons="4">
+      <div class="prog" data-module="4" data-lessons="5">
         <span id="pt" aria-live="polite"></span>
-        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><i id="pb"></i></div>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0"><i id="pb"></i></div>
       </div>
       <div class="menu-list">
         <a href="index.html" aria-current="page">סקירת היחידה</a>
-        <a href="chapter-1.html" data-lesson="4-1">סוגי מדפסות</a>
-        <a href="chapter-2.html" data-lesson="4-2">הגדרת מדפסת למשתמש</a>
-        <a href="chapter-3.html" data-lesson="4-3">טיפול בתקלות בסיסיות</a>
-        <a href="chapter-4.html" data-lesson="4-4">בדיקת ידע</a>
+        <a href="chapter-1.html" data-lesson="4-1">התקנת תוכנות במחשב</a>
+        <a href="chapter-2.html" data-lesson="4-2">תהליך התקנה של SCCM</a>
+        <a href="chapter-3.html" data-lesson="4-3">Software Center</a>
+        <a href="chapter-4.html" data-lesson="4-4">קטלוג תוכנות</a>
+        <a href="chapter-5.html" data-lesson="4-5">בדיקת ידע</a>
       </div>
     </nav>
 
     <main id="main" tabindex="-1">
       <section class="hero">
-        <h1>4. מדפסות</h1>
-        <p class="hero-sub" dir="ltr" lang="en">Printers</p>
-        <p>הלומדה מסבירה על סוגי המדפסות שנמצאות בשימוש בארגונים, כיצד להגדיר מדפסת ולטפל בתקלות בסיסיות</p>
+        <h1>4. התקנת תוכנות בארגון</h1>
+        <p class="hero-sub" dir="ltr" lang="en">Software Installation</p>
+        <p>הלומדה מסבירה כיצד מתקינים תוכנות בארגון: התקנה ידנית ואוטומטית, תהליך ההפצה ב-SCCM, ממשק Software Center וקטלוג התוכנות</p>
       </section>
 
       <section class="card">
         <h2>מטרות היחידה</h2>
         <ul class="obj">
-          <li>הלומד יבחין בין סוגי מדפסות שונים</li>
-          <li>הלומד יגדיר מדפסת למשתמש</li>
-          <li>הלומד יטפל בתקלות בסיסיות</li>
+          <li>הלומד יבחין בין התקנה ידנית להתקנה אוטומטית של תוכנות</li>
+          <li>הלומד יתאר את שלבי תהליך ההתקנה ב-SCCM</li>
+          <li>הלומד יסביר כיצד משתמשים מתקינים תוכנות דרך Software Center</li>
+          <li>הלומד יבחין בין הפצת תוכנה עבור משתמש להפצה עבור מחשב</li>
         </ul>
       </section>
 
@@ -53,24 +55,30 @@
           <li>
             <a href="chapter-1.html" data-lesson="4-1">
               <span class="num" aria-hidden="true">1</span>
-              <span class="txt"><strong>סוגי מדפסות</strong><span>סוגי המדפסות שנמצאות בשימוש בארגונים</span></span>
+              <span class="txt"><strong>התקנת תוכנות במחשב</strong><span>שתי הדרכים להתקנת תוכנות בסביבה ארגונית</span></span>
             </a>
           </li>
           <li>
             <a href="chapter-2.html" data-lesson="4-2">
               <span class="num" aria-hidden="true">2</span>
-              <span class="txt"><strong>הגדרת מדפסת למשתמש</strong><span>כיצד מגדירים מדפסת למשתמש</span></span>
+              <span class="txt"><strong>תהליך התקנה של SCCM</strong><span>שבעת השלבים בהתקנת תוכנה באמצעות SCCM</span></span>
             </a>
           </li>
           <li>
             <a href="chapter-3.html" data-lesson="4-3">
               <span class="num" aria-hidden="true">3</span>
-              <span class="txt"><strong>טיפול בתקלות בסיסיות</strong><span>תקלות נפוצות במדפסות וכיצד לפתור אותן</span></span>
+              <span class="txt"><strong>Software Center</strong><span>הממשק שבו משתמשים מתקינים תוכנות מהקטלוג הארגוני</span></span>
             </a>
           </li>
           <li>
             <a href="chapter-4.html" data-lesson="4-4">
               <span class="num" aria-hidden="true">4</span>
+              <span class="txt"><strong>קטלוג תוכנות</strong><span>הפצת תוכנות עבור משתמש ועבור מחשב</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="chapter-5.html" data-lesson="4-5">
+              <span class="num" aria-hidden="true">5</span>
               <span class="txt"><strong>בדיקת ידע</strong><span>שאלות לבדיקת ההבנה, עם משוב מיידי</span></span>
             </a>
           </li>
@@ -84,11 +92,11 @@
   <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
   <div class="dock">
     <div class="dock-in">
-      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
       <div class="foot" role="group" aria-label="ניווט בין פרקים">
-        <a class="btn ghost prev" href="../unit-3/chapter-3.html"><span aria-hidden="true">→</span> היחידה הקודמת</a>
-        <a class="btn ghost next" href="chapter-1.html">לפרק הראשון <span aria-hidden="true">←</span></a>
-        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <a class="btn ghost prev" href="../unit-3/chapter-10.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> היחידה הקודמת</a>
+        <a class="btn ghost next" href="chapter-1.html">לפרק הראשון <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
       </div>
     </div>
   </div>

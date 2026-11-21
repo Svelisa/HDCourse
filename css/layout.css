@@ -47,12 +47,14 @@ main > h2.sec {
 }
 
 .menu-list {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
 }
 
 .side-menu a {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.65rem;
@@ -72,7 +74,7 @@ main > h2.sec {
 .side-menu a[aria-current="true"],
 .side-menu a[aria-current="page"] {
   font-weight: 700;
-  background: color-mix(in srgb, var(--accent) 22%, transparent);
+  background: var(--tint);
   border-inline-start-color: var(--accent);
 }
 

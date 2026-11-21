@@ -18,30 +18,32 @@
   <div class="shell">
     <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
     <nav class="side-menu" aria-label="פרקי היחידה">
-      <div class="prog" data-module="5" data-lessons="3">
+      <div class="prog" data-module="5" data-lessons="4">
         <span id="pt" aria-live="polite"></span>
-        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><i id="pb"></i></div>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><i id="pb"></i></div>
       </div>
       <div class="menu-list">
         <a href="index.html" aria-current="page">סקירת היחידה</a>
-        <a href="chapter-1.html" data-lesson="5-1">סוגי תקשורת</a>
-        <a href="chapter-2.html" data-lesson="5-2">פרוטוקולים</a>
-        <a href="chapter-3.html" data-lesson="5-3">בדיקת ידע</a>
+        <a href="chapter-1.html" data-lesson="5-1">סוגי מדפסות</a>
+        <a href="chapter-2.html" data-lesson="5-2">הגדרת מדפסת למשתמש</a>
+        <a href="chapter-3.html" data-lesson="5-3">טיפול בתקלות בסיסיות</a>
+        <a href="chapter-4.html" data-lesson="5-4">בדיקת ידע</a>
       </div>
     </nav>
 
     <main id="main" tabindex="-1">
       <section class="hero">
-        <h1>5. תשתיות ותקשורת</h1>
-        <p class="hero-sub" dir="ltr" lang="en">Network</p>
-        <p>הלומדה מפרטת על סוגי תקשורת ופרוטוקולים המשמשים להעברת מידע</p>
+        <h1>5. מדפסות</h1>
+        <p class="hero-sub" dir="ltr" lang="en">Printers</p>
+        <p>הלומדה מסבירה על סוגי המדפסות שנמצאות בשימוש בארגונים, כיצד להגדיר מדפסת ולטפל בתקלות בסיסיות</p>
       </section>
 
       <section class="card">
         <h2>מטרות היחידה</h2>
         <ul class="obj">
-          <li>הלומד יבחין בין סוגי תקשורת</li>
-          <li>הלומד יסביר על הפרוטוקולים השונים</li>
+          <li>הלומד יבחין בין סוגי מדפסות שונים</li>
+          <li>הלומד יגדיר מדפסת למשתמש</li>
+          <li>הלומד יטפל בתקלות בסיסיות</li>
         </ul>
       </section>
 
@@ -51,18 +53,24 @@
           <li>
             <a href="chapter-1.html" data-lesson="5-1">
               <span class="num" aria-hidden="true">1</span>
-              <span class="txt"><strong>סוגי תקשורת</strong><span>סוגי התקשורת הנפוצים בארגון</span></span>
+              <span class="txt"><strong>סוגי מדפסות</strong><span>סוגי המדפסות שנמצאות בשימוש בארגונים</span></span>
             </a>
           </li>
           <li>
             <a href="chapter-2.html" data-lesson="5-2">
               <span class="num" aria-hidden="true">2</span>
-              <span class="txt"><strong>פרוטוקולים</strong><span>הפרוטוקולים המשמשים להעברת מידע</span></span>
+              <span class="txt"><strong>הגדרת מדפסת למשתמש</strong><span>כיצד מגדירים מדפסת למשתמש</span></span>
             </a>
           </li>
           <li>
             <a href="chapter-3.html" data-lesson="5-3">
               <span class="num" aria-hidden="true">3</span>
+              <span class="txt"><strong>טיפול בתקלות בסיסיות</strong><span>תקלות נפוצות במדפסות וכיצד לפתור אותן</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="chapter-4.html" data-lesson="5-4">
+              <span class="num" aria-hidden="true">4</span>
               <span class="txt"><strong>בדיקת ידע</strong><span>שאלות לבדיקת ההבנה, עם משוב מיידי</span></span>
             </a>
           </li>
@@ -76,11 +84,11 @@
   <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
   <div class="dock">
     <div class="dock-in">
-      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
       <div class="foot" role="group" aria-label="ניווט בין פרקים">
-        <a class="btn ghost prev" href="../unit-4/chapter-4.html"><span aria-hidden="true">→</span> היחידה הקודמת</a>
-        <a class="btn ghost next" href="chapter-1.html">לפרק הראשון <span aria-hidden="true">←</span></a>
-        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <a class="btn ghost prev" href="../unit-4/chapter-5.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> היחידה הקודמת</a>
+        <a class="btn ghost next" href="chapter-1.html">לפרק הראשון <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
       </div>
     </div>
   </div>

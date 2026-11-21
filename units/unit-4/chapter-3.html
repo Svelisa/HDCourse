@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>טיפול בתקלות בסיסיות | יחידה 4 | הכשרת נציגי HELPDESK</title>
+  <title>Software Center | יחידה 4 | הכשרת נציגי HELPDESK</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700;800&display=swap">
   <link rel="stylesheet" href="../../css/base.css">
   <link rel="stylesheet" href="../../css/layout.css">
@@ -18,28 +18,38 @@
   <div class="shell">
     <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
     <nav class="side-menu" aria-label="פרקי היחידה">
-      <div class="prog" data-module="4" data-lessons="4">
+      <div class="prog" data-module="4" data-lessons="5">
         <span id="pt" aria-live="polite"></span>
-        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><i id="pb"></i></div>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0"><i id="pb"></i></div>
       </div>
       <div class="menu-list">
         <a href="index.html">סקירת היחידה</a>
-        <a href="chapter-1.html" data-lesson="4-1">סוגי מדפסות</a>
-        <a href="chapter-2.html" data-lesson="4-2">הגדרת מדפסת למשתמש</a>
-        <a href="chapter-3.html" data-lesson="4-3" aria-current="page">טיפול בתקלות בסיסיות</a>
-        <a href="chapter-4.html" data-lesson="4-4">בדיקת ידע</a>
+        <a href="chapter-1.html" data-lesson="4-1">התקנת תוכנות במחשב</a>
+        <a href="chapter-2.html" data-lesson="4-2">תהליך התקנה של SCCM</a>
+        <a href="chapter-3.html" data-lesson="4-3" aria-current="page">Software Center</a>
+        <a href="chapter-4.html" data-lesson="4-4">קטלוג תוכנות</a>
+        <a href="chapter-5.html" data-lesson="4-5">בדיקת ידע</a>
       </div>
     </nav>
 
     <main id="main" tabindex="-1">
       <section class="hero slim">
-        <p class="hero-sub">יחידה 4 · פרק 3 מתוך 4</p>
-        <h1>טיפול בתקלות בסיסיות</h1>
+        <p class="hero-sub">יחידה 4 · פרק 3 מתוך 5</p>
+        <h1><span lang="en">Software Center</span></h1>
       </section>
 
-      <section class="card">
-        <h2>תוכן הפרק</h2>
-        <div class="ph">כאן יופיע תוכן הפרק.</div>
+      <section class="card" data-lesson="4-3">
+        <h2><span lang="en">Software Center</span></h2>
+        <div class="split split-md">
+          <div class="split-text">
+            <p>כאמור, <span lang="en">SCCM</span> הוא שרת שמפיץ תוכנות למחשבים של המשתמשים.</p>
+            <p>מצד המשתמש קיים ממשק שמקבל את העדכונים מ-<span lang="en">SCCM</span>, ושמו <span lang="en">Software Center</span>.</p>
+            <p>הממשק כולל קטלוג של יישומי תוכנה זמינים, שמשתמשים יכולים להתקין במחשב שלהם. מנהלי <span lang="en">IT</span> יכולים להתאים אישית את הקטלוג כך שיכלול יישומים ספציפיים לצורכי הארגון שלהם.</p>
+            <p>כמו כן, <span lang="en">Software Center</span> מספק עדכוני סטטוס בזמן אמת על תהליך התקנת התוכנה. משתמשים יכולים לעקוב אחר התקדמות בקשות ההתקנה שלהם ולראות מתי ההתקנות הושלמו.</p>
+            <p>כחלק מטיפול בתקלות, ניתן להסיר ולהתקין את התוכנה מחדש באמצעות <span lang="en">Software Center</span>.</p>
+          </div>
+          <figure class="bios"><svg class="bios-svg" viewBox="0 0 400 340" role="img" aria-label="איור: חלון Software Center עם רשימת תוכנות להתקנה" focusable="false"><rect width="400" height="340" fill="#f7f9fd"/><rect x="8" y="8" width="384" height="324" rx="8" fill="#fff" stroke="#b7c2d2" stroke-width="2"/><path d="M8 16a8 8 0 0 1 8-8h368a8 8 0 0 1 8 8v22H8z" fill="#e8f0fe"/><text x="20" y="28" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#2a3446">Software Center</text><rect x="8" y="38" width="384" height="40" fill="#4a9ddb"/><text x="20" y="63" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#fff">Company IT</text><rect x="8" y="78" width="112" height="254" fill="#e3e6eb"/><rect x="12" y="92" width="100" height="26" rx="3" fill="#fff"/><text x="20" y="110" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#1f2a3c" font-weight="700">Applications</text><text x="20" y="140" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#1f2a3c" font-weight="400">Updates</text><text x="20" y="170" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#1f2a3c" font-weight="400">Operating Systems</text><text x="20" y="200" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#1f2a3c" font-weight="400">Installation status</text><text x="20" y="230" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#1f2a3c" font-weight="400">Device compliance</text><text x="20" y="260" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#1f2a3c" font-weight="400">Options</text><text x="134" y="104" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2a3c">All</text><text x="168" y="104" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1f2a3c">Required</text><rect x="134" y="116" width="100" height="20" rx="2" fill="#fff" stroke="#8b97ab"/><text x="142" y="130" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" fill="#2a3446">Filter: All</text><rect x="134" y="150" width="76" height="62" rx="4" fill="#eef1f6"/><rect x="158" y="164" width="28" height="28" rx="7" fill="#d9531e"/><text x="172" y="228" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" fill="#2a3446">Office Suite</text><rect x="218" y="150" width="76" height="62" rx="4" fill="#eef1f6"/><rect x="242" y="164" width="28" height="28" rx="7" fill="#1f6f5c"/><text x="256" y="228" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" fill="#2a3446">Web Browser</text><rect x="302" y="150" width="76" height="62" rx="4" fill="#eef1f6"/><rect x="326" y="164" width="28" height="28" rx="7" fill="#c0392b"/><text x="340" y="228" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" fill="#2a3446">PDF Reader</text><rect x="134" y="242" width="76" height="62" rx="4" fill="#eef1f6"/><rect x="158" y="256" width="28" height="28" rx="7" fill="#0056d2"/><text x="172" y="320" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" fill="#2a3446">Video Call</text><rect x="218" y="242" width="76" height="62" rx="4" fill="#eef1f6"/><rect x="242" y="256" width="28" height="28" rx="7" fill="#7b4a9c"/><text x="256" y="320" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" fill="#2a3446">Code Editor</text><rect x="302" y="242" width="76" height="62" rx="4" fill="#eef1f6"/><rect x="326" y="256" width="28" height="28" rx="7" fill="#b4501e"/><text x="340" y="320" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" fill="#2a3446">Notes</text></svg></figure>
+        </div>
       </section>
     </main>
 
@@ -48,11 +58,11 @@
   <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
   <div class="dock">
     <div class="dock-in">
-      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
       <div class="foot" role="group" aria-label="ניווט בין פרקים">
-        <a class="btn ghost prev" href="chapter-2.html"><span aria-hidden="true">→</span> הפרק הקודם</a>
-        <a class="btn ghost next" href="chapter-4.html">הפרק הבא <span aria-hidden="true">←</span></a>
-        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <a class="btn ghost prev" href="chapter-2.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> הפרק הקודם</a>
+        <a class="btn ghost next" href="chapter-4.html">הפרק הבא <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
         <button type="button" class="btn mark" data-lesson="4-3" aria-pressed="false">סימון כהושלם</button>
       </div>
     </div>

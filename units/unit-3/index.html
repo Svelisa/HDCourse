@@ -18,15 +18,22 @@
   <div class="shell">
     <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
     <nav class="side-menu" aria-label="פרקי היחידה">
-      <div class="prog" data-module="3" data-lessons="3">
+      <div class="prog" data-module="3" data-lessons="10">
         <span id="pt" aria-live="polite"></span>
-        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><i id="pb"></i></div>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><i id="pb"></i></div>
       </div>
       <div class="menu-list">
         <a href="index.html" aria-current="page">סקירת היחידה</a>
-        <a href="chapter-1.html" data-lesson="3-1">מערכות ההפעלה הנפוצות</a>
-        <a href="chapter-2.html" data-lesson="3-2">ממשקי הניהול של Windows</a>
-        <a href="chapter-3.html" data-lesson="3-3">בדיקת ידע</a>
+        <a href="chapter-1.html" data-lesson="3-1">מהי מערכת הפעלה?</a>
+        <a href="chapter-2.html" data-lesson="3-2">מערכות ההפעלה הנפוצות</a>
+        <a href="chapter-3.html" data-lesson="3-3">דרכים להתקנת מערכת הפעלה</a>
+        <a href="chapter-4.html" data-lesson="3-4">ממשקי ניהול של Windows</a>
+        <a href="chapter-5.html" data-lesson="3-5">Registry</a>
+        <a href="chapter-6.html" data-lesson="3-6">שימוש בפקודות ב-Windows</a>
+        <a href="chapter-7.html" data-lesson="3-7">פקודות נפוצות ב-CMD</a>
+        <a href="chapter-8.html" data-lesson="3-8">פקודות שימושיות בארגון</a>
+        <a href="chapter-9.html" data-lesson="3-9">פרופיל משתמש</a>
+        <a href="chapter-10.html" data-lesson="3-10">בדיקת ידע</a>
       </div>
     </nav>
 
@@ -41,7 +48,7 @@
         <h2>מטרות היחידה</h2>
         <ul class="obj">
           <li>הלומד יבחין בין מערכות הפעלה שונות</li>
-          <li>הלומד יסביר מהם ממשקי הניהול של מערכת ההפעלה וכיצד עובדים איתם</li>
+          <li>הלומד יסביר מהם ממשקי ניהול של מערכת ההפעלה וכיצד עובדים איתם</li>
         </ul>
       </section>
 
@@ -51,18 +58,60 @@
           <li>
             <a href="chapter-1.html" data-lesson="3-1">
               <span class="num" aria-hidden="true">1</span>
-              <span class="txt"><strong>מערכות ההפעלה הנפוצות</strong><span>ההבדלים בין מערכות הפעלה שונות</span></span>
+              <span class="txt"><strong>מהי מערכת הפעלה?</strong><span>מה תפקידה של מערכת ההפעלה</span></span>
             </a>
           </li>
           <li>
             <a href="chapter-2.html" data-lesson="3-2">
               <span class="num" aria-hidden="true">2</span>
-              <span class="txt"><strong>ממשקי הניהול של Windows</strong><span>ממשקי הניהול השימושיים בחקירת תקלות</span></span>
+              <span class="txt"><strong>מערכות ההפעלה הנפוצות</strong><span>ההבדלים בין Windows, לינוקס, MAC, iOS, אנדרואיד ו-BSD</span></span>
             </a>
           </li>
           <li>
             <a href="chapter-3.html" data-lesson="3-3">
               <span class="num" aria-hidden="true">3</span>
+              <span class="txt"><strong>דרכים להתקנת מערכת הפעלה</strong><span>ארבע שיטות להתקנת מערכת הפעלה במחשב</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="chapter-4.html" data-lesson="3-4">
+              <span class="num" aria-hidden="true">4</span>
+              <span class="txt"><strong>ממשקי ניהול של Windows</strong><span>ממשקי הניהול השימושיים בחקירת תקלות</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="chapter-5.html" data-lesson="3-5">
+              <span class="num" aria-hidden="true">5</span>
+              <span class="txt"><strong>Registry</strong><span>מאגר המידע המרכזי של ההגדרות והתצורות במערכת</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="chapter-6.html" data-lesson="3-6">
+              <span class="num" aria-hidden="true">6</span>
+              <span class="txt"><strong>שימוש בפקודות ב-Windows</strong><span>CMD ו-PowerShell לביצוע שינויים וטיפול בתקלות</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="chapter-7.html" data-lesson="3-7">
+              <span class="num" aria-hidden="true">7</span>
+              <span class="txt"><strong>פקודות נפוצות ב-CMD</strong><span>פקודות מערכת ורשת שימושיות לחקירת תקלות</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="chapter-8.html" data-lesson="3-8">
+              <span class="num" aria-hidden="true">8</span>
+              <span class="txt"><strong>פקודות שימושיות בארגון</strong><span>GPUPDATE, GPRESULT ו-NET USE בסביבה ארגונית</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="chapter-9.html" data-lesson="3-9">
+              <span class="num" aria-hidden="true">9</span>
+              <span class="txt"><strong>פרופיל משתמש</strong><span>מהו פרופיל משתמש, היכן הוא נשמר וכיצד מגבים אותו</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="chapter-10.html" data-lesson="3-10">
+              <span class="num" aria-hidden="true">10</span>
               <span class="txt"><strong>בדיקת ידע</strong><span>שאלות לבדיקת ההבנה, עם משוב מיידי</span></span>
             </a>
           </li>
@@ -76,11 +125,11 @@
   <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
   <div class="dock">
     <div class="dock-in">
-      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
       <div class="foot" role="group" aria-label="ניווט בין פרקים">
-        <a class="btn ghost prev" href="../unit-2/chapter-3.html"><span aria-hidden="true">→</span> היחידה הקודמת</a>
-        <a class="btn ghost next" href="chapter-1.html">לפרק הראשון <span aria-hidden="true">←</span></a>
-        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <a class="btn ghost prev" href="../unit-2/chapter-12.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> היחידה הקודמת</a>
+        <a class="btn ghost next" href="chapter-1.html">לפרק הראשון <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
       </div>
     </div>
   </div>

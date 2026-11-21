@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>ממשקי הניהול של Windows | יחידה 3 | הכשרת נציגי HELPDESK</title>
+  <title>מערכות ההפעלה הנפוצות | יחידה 3 | הכשרת נציגי HELPDESK</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700;800&display=swap">
   <link rel="stylesheet" href="../../css/base.css">
   <link rel="stylesheet" href="../../css/layout.css">
@@ -18,27 +18,36 @@
   <div class="shell">
     <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
     <nav class="side-menu" aria-label="פרקי היחידה">
-      <div class="prog" data-module="3" data-lessons="3">
+      <div class="prog" data-module="3" data-lessons="10">
         <span id="pt" aria-live="polite"></span>
-        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><i id="pb"></i></div>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><i id="pb"></i></div>
       </div>
       <div class="menu-list">
         <a href="index.html">סקירת היחידה</a>
-        <a href="chapter-1.html" data-lesson="3-1">מערכות ההפעלה הנפוצות</a>
-        <a href="chapter-2.html" data-lesson="3-2" aria-current="page">ממשקי הניהול של Windows</a>
-        <a href="chapter-3.html" data-lesson="3-3">בדיקת ידע</a>
+        <a href="chapter-1.html" data-lesson="3-1">מהי מערכת הפעלה?</a>
+        <a href="chapter-2.html" data-lesson="3-2" aria-current="page">מערכות ההפעלה הנפוצות</a>
+        <a href="chapter-3.html" data-lesson="3-3">דרכים להתקנת מערכת הפעלה</a>
+        <a href="chapter-4.html" data-lesson="3-4">ממשקי ניהול של Windows</a>
+        <a href="chapter-5.html" data-lesson="3-5">Registry</a>
+        <a href="chapter-6.html" data-lesson="3-6">שימוש בפקודות ב-Windows</a>
+        <a href="chapter-7.html" data-lesson="3-7">פקודות נפוצות ב-CMD</a>
+        <a href="chapter-8.html" data-lesson="3-8">פקודות שימושיות בארגון</a>
+        <a href="chapter-9.html" data-lesson="3-9">פרופיל משתמש</a>
+        <a href="chapter-10.html" data-lesson="3-10">בדיקת ידע</a>
       </div>
     </nav>
 
     <main id="main" tabindex="-1">
       <section class="hero slim">
-        <p class="hero-sub">יחידה 3 · פרק 2 מתוך 3</p>
-        <h1>ממשקי הניהול של Windows</h1>
+        <p class="hero-sub">יחידה 3 · פרק 2 מתוך 10</p>
+        <h1>מערכות ההפעלה הנפוצות</h1>
       </section>
 
-      <section class="card">
-        <h2>תוכן הפרק</h2>
-        <div class="ph">כאן יופיע תוכן הפרק.</div>
+      <section class="card tabs" data-lesson="3-2">
+        <h2>מערכות הפעלה נפוצות</h2>
+        <p class="hint">עברו בין הלשוניות לקבלת מידע על כל מערכת הפעלה.</p>
+        <div role="tablist" class="tab-list one-row" aria-label="מערכות הפעלה נפוצות"><button type="button" role="tab" class="tab" id="tab-win" aria-controls="pan-win" aria-selected="true" tabindex="0"><span lang="en">Windows</span></button><button type="button" role="tab" class="tab" id="tab-lin" aria-controls="pan-lin" aria-selected="false" tabindex="-1"><span lang="en">Linux</span></button><button type="button" role="tab" class="tab" id="tab-mac" aria-controls="pan-mac" aria-selected="false" tabindex="-1"><span lang="en">MAC</span></button><button type="button" role="tab" class="tab" id="tab-ios" aria-controls="pan-ios" aria-selected="false" tabindex="-1"><span lang="en">iOS</span></button><button type="button" role="tab" class="tab" id="tab-and" aria-controls="pan-and" aria-selected="false" tabindex="-1"><span lang="en">Android</span></button><button type="button" role="tab" class="tab" id="tab-bsd" aria-controls="pan-bsd" aria-selected="false" tabindex="-1"><span lang="en">BSD</span></button></div>
+        <div role="tabpanel" class="tab-panel" id="pan-win" aria-labelledby="tab-win" tabindex="0"><h3><span lang="en">Windows</span></h3><p>מערכת ההפעלה <span lang="en">Windows</span> (<span lang="en">OS</span>) היא מערכת הפעלה מבוססת ממשק משתמש גרפי (<span lang="en">GUI</span>), שפותחה על ידי <span lang="en">Microsoft Corporation</span>.</p><p>היא נועדה לספק למשתמשים ממשק ידידותי לאינטראקציה עם המחשבים שלהם.</p><p>הגרסה הראשונה של <span lang="en">Windows</span> הוצגה בשנת 1985, ומאז היא עברה עדכונים ושדרוגים רבים. המערכת תואמת למגוון רחב של יישומי חומרה ותוכנה.</p><p>מאפיינים עיקריים:</p><ul class="check"><li>אבטחה מובנית להגנה על המחשב מפני תוכנות זדוניות ווירוסים</li><li>מערכת ניהול קבצים מקיפה, שמקלה על ארגון הקבצים והגישה אליהם</li><li>הפעלת מספר יישומים בו זמנית, מה שמקל על עבודה על כמה משימות במקביל</li></ul></div><div role="tabpanel" class="tab-panel" id="pan-lin" aria-labelledby="tab-lin" tabindex="0" hidden><h3>לינוקס (<span lang="en">Linux</span>)</h3><p>לינוקס היא מערכת הפעלה (<span lang="en">OS</span>) בקוד פתוח, המנהלת את משאבי החומרה של המערכת, כולל זיכרון ואחסון.</p><p>היא משמשת מתווכת בין היישומים לבין החומרה: היא יוצרת חיבורים בין כל התוכנות לבין המשאבים הפיזיים שמבצעים את העבודה.</p><p>לינוקס דומה למערכות הפעלה אחרות, כמו <span lang="en">Windows</span>, <span lang="en">Mac OS</span> או <span lang="en">iOS</span>.</p><p>ללינוקס יש גם ממשק משתמש גרפי (<span lang="en">GUI</span>), ויש בה יישומים כמו מעבדי תמלילים, עורכי תמונות ווידאו ומסדי נתונים, בדומה למערכות הפעלה אחרות.</p><p>ברוב המקרים, אם תוכנה קיימת עבור <span lang="en">Windows</span> או <span lang="en">MAC</span>, היא קיימת גם עבור לינוקס.</p></div><div role="tabpanel" class="tab-panel" id="pan-mac" aria-labelledby="tab-mac" tabindex="0" hidden><h3><span lang="en">Mac OS</span></h3><p>מערכת הפעלה שפותחה על ידי חברת המחשבים האמריקאית <span lang="en">Apple Inc</span>. היא הוצגה בשנת 1984 כדי להפעיל את קו המקינטוש של החברה, מחשבים אישיים (<span lang="en">PC</span>).</p><p>המקינטוש בישר את עידן מערכות ממשק המשתמש הגרפי (<span lang="en">GUI</span>), והוא נתן השראה למיקרוסופט לפתח ממשק גרפי משלו: מערכת ההפעלה <span lang="en">Windows</span>.</p><p>השיווק של אפל התמקד מאוד בקלות השימוש האינטואיטיבית של המערכת. בניגוד כמעט לכל מחשבי ה-<span lang="en">PC</span> העכשוויים האחרים, מערכת ההפעלה של <span lang="en">Mac</span> (שכונתה בתחילה פשוט "תוכנת מערכת", עם מספר גרסה) הייתה מבוססת גרפית.</p><p>במקום להקליד פקודות ונתיבי ספרייה בהנחיות טקסט, המשתמשים הזיזו מצביע עכבר כדי לנווט חזותית ב-<span lang="en">Finder</span>: סדרה של תיקיות וקבצים וירטואליים, המיוצגים על ידי סמלים.</p></div><div role="tabpanel" class="tab-panel" id="pan-ios" aria-labelledby="tab-ios" tabindex="0" hidden><h3><span lang="en">iOS</span></h3><p>מערכת ההפעלה <span lang="en">iOS</span> נוצרה לצורך תפעול האייפון.</p><p>באמצעותה אפשר לתפעל את חומרת המכשיר ולנהל את ממשק המשתמש בעזרת מסך מגע והאפליקציות שמותקנות במכשיר.</p></div><div role="tabpanel" class="tab-panel" id="pan-and" aria-labelledby="tab-and" tabindex="0" hidden><h3><span lang="en">Android</span></h3><p>זוהי מערכת ההפעלה של מכשירי אנדרואיד, והיא מבוססת על ליבת לינוקס.</p><p>המערכת מאפשרת ממשק משתמש גרפי, דפדפן אינטרנט ויישומי משתמש קצה הניתנים להורדה.</p><p>אנדרואיד שוחררה תחת רישיון הקוד הפתוח <span lang="en">Apache v2</span>. הרישיון מאפשר לפתח וריאציות רבות של המערכת עבור מכשירים אחרים, כגון קונסולות משחקים ומצלמות דיגיטליות.</p><p>אנדרואיד מבוססת על תוכנת קוד פתוח, אך רוב מכשירי האנדרואיד מגיעים עם חבילת תוכנות קנייניות מותקנת מראש, כגון מפות גוגל, יוטיוב, גוגל כרום וג׳ימייל.</p></div><div role="tabpanel" class="tab-panel" id="pan-bsd" aria-labelledby="tab-bsd" tabindex="0" hidden><h3><span lang="en">BSD</span></h3><p><span lang="en">Berkeley Software Distribution</span>, או בקיצור <span lang="en">BSD</span>, היא נגזרת של מערכת ההפעלה <span lang="en">UNIX</span>. היא נוצרה ותוחזקה באוניברסיטת קליפורניה בברקלי משנות ה-70 ועד אמצע שנות ה-90 של המאה העשרים.</p><p>באמצע שנות ה-90 גרסאות אלו נזנחו לטובת מערכות יוניקס אחרות, מה שהביא להפסקת הפיתוח של המערכת.</p><p>עם זאת, קוד המקור שלה היווה בסיס טוב למספר מערכות הפעלה בקוד פתוח: <span lang="en">FreeBSD</span>, <span lang="en">NetBSD</span>, <span lang="en">OpenBSD</span>, <span lang="en">TrueOS</span> ו-<span lang="en">Darwin</span>.</p><p>על בסיס <span lang="en">Darwin</span> נבנו מערכות ההפעלה המודרניות של אפל, <span lang="en">macOS</span> ו-<span lang="en">iOS</span>, שמופצות תחת רישיון מסחרי.</p></div>
       </section>
     </main>
 
@@ -47,11 +56,11 @@
   <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
   <div class="dock">
     <div class="dock-in">
-      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
       <div class="foot" role="group" aria-label="ניווט בין פרקים">
-        <a class="btn ghost prev" href="chapter-1.html"><span aria-hidden="true">→</span> הפרק הקודם</a>
-        <a class="btn ghost next" href="chapter-3.html">הפרק הבא <span aria-hidden="true">←</span></a>
-        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <a class="btn ghost prev" href="chapter-1.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> הפרק הקודם</a>
+        <a class="btn ghost next" href="chapter-3.html">הפרק הבא <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
         <button type="button" class="btn mark" data-lesson="3-2" aria-pressed="false">סימון כהושלם</button>
       </div>
     </div>
@@ -59,5 +68,6 @@
 
   <script src="../../js/icons.js"></script>
   <script src="../../js/progress.js"></script>
+  <script src="../../js/tabs.js"></script>
 </body>
 </html>

@@ -25,6 +25,18 @@ document.querySelectorAll(".chapter").forEach(function (chapter) {
   dialog.querySelector(".dlg-in").appendChild(live);
   var seen = {};
 
+  // מעקב אוטומטי: מפתח הפרק (למשל "1-1") נלקח מכפתור "סימון כהושלם" שבעמוד
+  var mark = document.querySelector(".mark[data-lesson]");
+  var lessonKey = mark && mark.dataset.lesson;
+  var tracker = window.courseProgress;
+
+  // שחזור מה שכבר נצפה בביקורים קודמים
+  if (lessonKey && tracker) {
+    tracker.getSeen(lessonKey).forEach(function (i) {
+      if (tiles[i]) markSeen(i);
+    });
+  }
+
   // הצגת האריח במקום i בחלון
   function show(i) {
     var tile = tiles[i];
@@ -34,7 +46,6 @@ document.querySelectorAll(".chapter").forEach(function (chapter) {
     dialog.querySelector("h3").textContent = tile.dataset.title;
     body.innerHTML = tile.parentNode.querySelector("template").innerHTML;
     body.scrollTop = 0;
-    dialog.querySelector(".pos").textContent = (i + 1) + " / " + tiles.length;
 
     // אם הכפתור שהיה בפוקוס הפך ללא פעיל, מעבירים את הפוקוס לכפתור השני
     var hadFocus = document.activeElement;
@@ -46,7 +57,22 @@ document.querySelectorAll(".chapter").forEach(function (chapter) {
     // הכרזה לקוראי מסך
     live.textContent = tile.dataset.title + ", תחום " + (i + 1) + " מתוך " + tiles.length;
 
-    // סימון האריח כנקרא (גם לקוראי מסך) ועדכון המונה
+    var wasAll = Object.keys(seen).length === tiles.length;
+    markSeen(i);
+
+    // שמירת הנצפה, והשלמה אוטומטית של הפרק כשצפו בכל התכנים
+    if (lessonKey && tracker) {
+      tracker.setSeen(lessonKey, Object.keys(seen).map(Number));
+      if (!wasAll && Object.keys(seen).length === tiles.length) {
+        tracker.complete(lessonKey);
+        announceDone();
+      }
+    }
+  }
+
+  // סימון האריח כנקרא (גם לקוראי מסך) ועדכון המונה
+  function markSeen(i) {
+    var tile = tiles[i];
     seen[i] = true;
     tile.classList.add("seen");
     if (!tile.querySelector(".sr-only")) {
@@ -56,6 +82,17 @@ document.querySelectorAll(".chapter").forEach(function (chapter) {
       tile.querySelector(".t").appendChild(note);
     }
     if (counter) counter.textContent = Object.keys(seen).length;
+  }
+
+  // הודעה בראש הכרטיס (ולקורא מסך) שהפרק סומן כהושלם
+  function announceDone() {
+    var hint = chapter.querySelector(".hint");
+    if (!hint || hint.querySelector(".auto-note")) return;
+    var msg = document.createElement("strong");
+    msg.className = "auto-note sr-only";
+    msg.setAttribute("role", "status");
+    msg.textContent = " ✓ צפית בכל התכנים, והפרק סומן כהושלם.";
+    hint.appendChild(msg);
   }
 
   tiles.forEach(function (tile, i) {

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>היררכיית זיכרון | יחידה 2 | הכשרת נציגי HELPDESK</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+  <a class="skip" href="#main">דילוג לתוכן הראשי</a>
+  <header class="site-header">
+    <a href="../../index.html">הכשרת נציגי HELPDESK</a>
+  </header>
+
+  <div class="shell">
+    <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
+    <nav class="side-menu" aria-label="פרקי היחידה">
+      <div class="prog" data-module="2" data-lessons="12">
+        <span id="pt" aria-live="polite"></span>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0"><i id="pb"></i></div>
+      </div>
+      <div class="menu-list">
+        <a href="index.html">סקירת היחידה</a>
+        <a href="chapter-1.html" data-lesson="2-1">רכיבי המחשב</a>
+        <a href="chapter-2.html" data-lesson="2-2">מיינו את הרכיבים</a>
+        <a href="chapter-3.html" data-lesson="2-3">סקירת מארז המחשב</a>
+        <a href="chapter-4.html" data-lesson="2-4">אמצעי אחסון</a>
+        <a href="chapter-5.html" data-lesson="2-5">לוח אם</a>
+        <a href="chapter-6.html" data-lesson="2-6">מעבד (CPU)</a>
+        <a href="chapter-7.html" data-lesson="2-7">זיכרון במחשב</a>
+        <a href="chapter-8.html" data-lesson="2-8" aria-current="page">היררכיית זיכרון</a>
+        <a href="chapter-9.html" data-lesson="2-9">תרגול: היררכיית זיכרון</a>
+        <a href="chapter-10.html" data-lesson="2-10">BIOS</a>
+        <a href="chapter-11.html" data-lesson="2-11">UEFI</a>
+        <a href="chapter-12.html" data-lesson="2-12">תרגול: BIOS ו-UEFI</a>
+      </div>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <section class="hero slim">
+        <p class="hero-sub">יחידה 2 · פרק 8 מתוך 12</p>
+        <h1>היררכיית זיכרון</h1>
+      </section>
+
+      <section class="card">
+        <h2>היררכיית זיכרון</h2>
+        <p>זיכרון המחשב הוא בדיוק כמו המוח האנושי. הוא משמש לאחסון נתונים, מידע והוראות. זוהי יחידת אחסון, או התקן אחסון, שבו נשמרים הנתונים שיש לעבד וההוראות הנדרשות לעיבוד. הוא יכול לאחסן גם את הקלט וגם את הפלט.</p>
+        <p>כאשר פותחים תוכנה, היא נטענת מהזיכרון המשני לזיכרון הראשי. למשל, הנתונים מכונן <span lang="en">SSD</span> עוברים ל-<span lang="en">RAM</span>.</p>
+        <p>מכיוון שהגישה לזיכרון הראשי מהירה יותר, התוכנה שנפתחה יכולה להתחבר למעבד של המחשב מהר יותר.</p>
+        <p>הזיכרון הוא נדיף, כלומר הנתונים נשמרים בו רק באופן זמני. נתונים שנשמרו בזיכרון זמני נמחקים אוטומטית כשמכבים את המחשב. כששומרים את הקובץ (כפתור <span lang="en">SAVE</span>), הוא נשלח לזיכרון המשני לאחסון.</p>
+      </section>
+
+      <section class="card tabs" data-lesson="2-8">
+        <h2>רמות הזיכרון</h2>
+        <p class="hint">עברו בין הלשוניות לקבלת מידע נוסף.</p>
+        <div role="tablist" class="tab-list" aria-label="רמות הזיכרון"><button type="button" role="tab" class="tab" id="tab-reg" aria-controls="pan-reg" aria-selected="true" tabindex="0">אוגרים</button><button type="button" role="tab" class="tab" id="tab-cache" aria-controls="pan-cache" aria-selected="false" tabindex="-1">זיכרון <span lang="en">Cache</span></button><button type="button" role="tab" class="tab" id="tab-ram" aria-controls="pan-ram" aria-selected="false" tabindex="-1">זיכרון <span lang="en">RAM</span></button><button type="button" role="tab" class="tab" id="tab-sec" aria-controls="pan-sec" aria-selected="false" tabindex="-1">זיכרון משני</button></div>
+        <div role="tabpanel" class="tab-panel" id="pan-reg" aria-labelledby="tab-reg" tabindex="0"><h3>אוגרים</h3><p>אלה יחידות זיכרון קטנות ומהירות הממוקמות במעבד.</p><p>הן משמשות לאחסון הנתונים וההוראות הנפוצים ביותר.</p><p>לאוגרים יש את זמן הגישה המהיר ביותר ואת קיבולת האחסון הקטנה ביותר.</p></div><div role="tabpanel" class="tab-panel" id="pan-cache" aria-labelledby="tab-cache" tabindex="0" hidden><h3>זיכרון מטמון</h3><p>זיכרון מטמון הוא יחידת זיכרון קטנה ומהירה הממוקמת קרוב למעבד. הוא מאחסן נתונים בשימוש תכוף והוראות שניגשו אליהם לאחרונה מהזיכרון הראשי. זיכרון מטמון נועד למזער את הזמן שלוקח לגשת לנתונים על ידי מתן גישה מהירה ל-<span lang="en">CPU</span> לנתונים בשימוש תכוף.</p></div><div role="tabpanel" class="tab-panel" id="pan-ram" aria-labelledby="tab-ram" tabindex="0" hidden><h3>זיכרון ראשי</h3><p>זיכרון ראשי, הידוע גם בשם <span lang="en">RAM</span> (זיכרון גישה אקראית), הוא הזיכרון העיקרי של מערכת מחשב. יש לו נפח אחסון גדול יותר מזיכרון מטמון, אבל הוא איטי יותר. הזיכרון הראשי משמש לאחסון נתונים והוראות שנמצאים כעת בשימוש על ידי המעבד.</p><h4>סוגי זיכרון ראשי</h4><ul><li><strong>זיכרון <span lang="en">RAM</span> סטטי:</strong> מאחסן את המידע הבינארי שנשאר בתוקף כל עוד מסופק חשמל. יש לו זמן גישה מהיר יותר והוא משמש ביישום זיכרון מטמון.</li><li><strong>זיכרון <span lang="en">RAM</span> דינמי:</strong> מאחסן את המידע הבינארי כמטען חשמלי על קבלים. המטען דועך לאחר כמה אלפיות שניות, ולכן נדרש רענון מתמיד של המעגלים כדי לשמור על המידע. הוא מכיל יותר תאי זיכרון ליחידת שטח בהשוואה ל-<span lang="en">RAM</span> סטטי.</li></ul></div><div role="tabpanel" class="tab-panel" id="pan-sec" aria-labelledby="tab-sec" tabindex="0" hidden><h3>זיכרון משני</h3><p>אחסון משני, כגון כונני דיסק קשיח (<span lang="en">HDD</span>) וכונני מצב מוצק (<span lang="en">SSD</span>), הוא יחידת זיכרון לא נדיפה שיש לה נפח אחסון גדול יותר מהזיכרון הראשי. הוא משמש לאחסון נתונים והוראות שאינם נמצאים כעת בשימוש על ידי המעבד. לאחסון משני יש זמן הגישה האיטי ביותר והוא בדרך כלל סוג הזיכרון הזול ביותר בהיררכיית הזיכרון.</p></div>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
+  <div class="dock">
+    <div class="dock-in">
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <div class="foot" role="group" aria-label="ניווט בין פרקים">
+        <a class="btn ghost prev" href="chapter-7.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> הפרק הקודם</a>
+        <a class="btn ghost next" href="chapter-9.html">הפרק הבא <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <button type="button" class="btn mark" data-lesson="2-8" aria-pressed="false">סימון כהושלם</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../js/icons.js"></script>
+  <script src="../../js/progress.js"></script>
+  <script src="../../js/tabs.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>בדיקת ידע | יחידה 3 | הכשרת נציגי HELPDESK</title>
+  <title>דרכים להתקנת מערכת הפעלה | יחידה 3 | הכשרת נציגי HELPDESK</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700;800&display=swap">
   <link rel="stylesheet" href="../../css/base.css">
   <link rel="stylesheet" href="../../css/layout.css">
@@ -18,27 +18,43 @@
   <div class="shell">
     <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
     <nav class="side-menu" aria-label="פרקי היחידה">
-      <div class="prog" data-module="3" data-lessons="3">
+      <div class="prog" data-module="3" data-lessons="10">
         <span id="pt" aria-live="polite"></span>
-        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><i id="pb"></i></div>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><i id="pb"></i></div>
       </div>
       <div class="menu-list">
         <a href="index.html">סקירת היחידה</a>
-        <a href="chapter-1.html" data-lesson="3-1">מערכות ההפעלה הנפוצות</a>
-        <a href="chapter-2.html" data-lesson="3-2">ממשקי הניהול של Windows</a>
-        <a href="chapter-3.html" data-lesson="3-3" aria-current="page">בדיקת ידע</a>
+        <a href="chapter-1.html" data-lesson="3-1">מהי מערכת הפעלה?</a>
+        <a href="chapter-2.html" data-lesson="3-2">מערכות ההפעלה הנפוצות</a>
+        <a href="chapter-3.html" data-lesson="3-3" aria-current="page">דרכים להתקנת מערכת הפעלה</a>
+        <a href="chapter-4.html" data-lesson="3-4">ממשקי ניהול של Windows</a>
+        <a href="chapter-5.html" data-lesson="3-5">Registry</a>
+        <a href="chapter-6.html" data-lesson="3-6">שימוש בפקודות ב-Windows</a>
+        <a href="chapter-7.html" data-lesson="3-7">פקודות נפוצות ב-CMD</a>
+        <a href="chapter-8.html" data-lesson="3-8">פקודות שימושיות בארגון</a>
+        <a href="chapter-9.html" data-lesson="3-9">פרופיל משתמש</a>
+        <a href="chapter-10.html" data-lesson="3-10">בדיקת ידע</a>
       </div>
     </nav>
 
     <main id="main" tabindex="-1">
       <section class="hero slim">
-        <p class="hero-sub">יחידה 3 · פרק 3 מתוך 3</p>
-        <h1>בדיקת ידע</h1>
+        <p class="hero-sub">יחידה 3 · פרק 3 מתוך 10</p>
+        <h1>דרכים להתקנת מערכת הפעלה</h1>
       </section>
 
-      <section class="card">
-        <h2>שאלות</h2>
-        <div class="ph">כאן יוכנסו שאלות עם משוב מיידי.</div>
+      <section class="card hs" data-lesson="3-3">
+        <h2>דרכים להתקנת מערכת הפעלה</h2>
+        <p class="hint">לחצו על האייקון כדי לקרוא על הדרך.</p>
+        <div class="tiles c4"><button type="button" class="tile hs-pt" data-id="cloud" aria-haspopup="dialog"><span class="ic" aria-hidden="true"><i class="bi bi-cloud-down"></i></span><span class="t">התקנה משירותי ענן</span></button><button type="button" class="tile hs-pt" data-id="tools" aria-haspopup="dialog"><span class="ic" aria-hidden="true"><i class="bi bi-tray-down"></i></span><span class="t">התקנה מכלי ניהול הפצות</span></button><button type="button" class="tile hs-pt" data-id="net" aria-haspopup="dialog"><span class="ic" aria-hidden="true"><i class="bi bi-deploy"></i></span><span class="t">התקנה מהרשת</span></button><button type="button" class="tile hs-pt" data-id="media" aria-haspopup="dialog"><span class="ic" aria-hidden="true"><i class="bi bi-usb"></i></span><span class="t">התקנה מהתקן מדיה פיזי</span></button></div>
+        <dialog class="dlg" aria-labelledby="hsT">
+          <div class="dlg-in">
+            <div class="dlg-head"><span class="ic dlg-ic" data-for="cloud" hidden><i class="bi bi-cloud-down" aria-hidden="true"></i></span><span class="ic dlg-ic" data-for="tools" hidden><i class="bi bi-tray-down" aria-hidden="true"></i></span><span class="ic dlg-ic" data-for="net" hidden><i class="bi bi-deploy" aria-hidden="true"></i></span><span class="ic dlg-ic" data-for="media" hidden><i class="bi bi-usb" aria-hidden="true"></i></span><h3 id="hsT"></h3><button type="button" class="x" aria-label="סגירה"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+            <div class="dlg-body"></div>
+            <div class="dlg-foot dlg-foot-empty" aria-hidden="true"></div>
+          </div>
+        </dialog>
+        <template id="hs-cloud" data-title='התקנה משירותי ענן'><p>מערכת ההפעלה ניתנת להורדה והתקנה ישירות מהאינטרנט באמצעות אתרי התמיכה של היצרן או שירותי ענן כמו <span lang="en">Microsoft Azure</span> או <span lang="en">Amazon Web Services</span>.</p></template><template id="hs-tools" data-title='התקנה מהרשת באמצעות כלי ניהול (<span lang="en">Deployment Tools</span>)'><p>ניתן להתקין מערכת הפעלה באמצעות שימוש בכלים לניהול התקנות, כמו <span lang="en">Microsoft Deployment Toolkit</span> (<span lang="en">MDT</span>), או תוכנת התקנה אוטומטית כגון <span lang="en">SCCM</span> של <span lang="en">Microsoft</span>.</p><p>כלים אלו מאפשרים למנהלי מערכת לנהל ולהפיץ את התקנת מערכת ההפעלה ברשת באופן אוטומטי ומרכזי.</p></template><template id="hs-net" data-title='התקנה מהרשת (<span lang="en">Network installation</span>)'><p>תהליך זה מאפשר להתקין מערכת הפעלה ישירות מהרשת, על ידי ביצוע אימות מרחוק והורדת הקבצים הנדרשים.</p><p>המחשב צריך להיות מחובר לרשת המתאימה ולהתחבר לשרת ההתקנות באמצעות פרוטוקולים כמו <span lang="en">PXE</span> (<span lang="en">Preboot eXecution Environment</span>).</p><p>זו השיטה שבה מתקינים עמדות עבודה בארגונים.</p></template><template id="hs-media" data-title='התקנה מהתקן מדיה פיזי'><p>תהליך זה כולל שימוש במדיה פיזית, כגון דיסק <span lang="en">CD/DVD</span> או כונן <span lang="en">USB</span> עם קובץ ההתקנה של מערכת ההפעלה.</p><p>מכניסים את המדיה למחשב ומפעילים את תהליך ההתקנה מהמדיה באמצעות נגישות ל-<span lang="en">BIOS/UEFI</span>. התקנת המערכת מתבצעת על הכונן הקשיח של המחשב.</p></template>
       </section>
     </main>
 
@@ -47,11 +63,11 @@
   <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
   <div class="dock">
     <div class="dock-in">
-      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
       <div class="foot" role="group" aria-label="ניווט בין פרקים">
-        <a class="btn ghost prev" href="chapter-2.html"><span aria-hidden="true">→</span> הפרק הקודם</a>
-        <a class="btn ghost next" href="../unit-4/index.html">היחידה הבאה <span aria-hidden="true">←</span></a>
-        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <a class="btn ghost prev" href="chapter-2.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> הפרק הקודם</a>
+        <a class="btn ghost next" href="chapter-4.html">הפרק הבא <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
         <button type="button" class="btn mark" data-lesson="3-3" aria-pressed="false">סימון כהושלם</button>
       </div>
     </div>
@@ -59,5 +75,6 @@
 
   <script src="../../js/icons.js"></script>
   <script src="../../js/progress.js"></script>
+  <script src="../../js/hotspots.js"></script>
 </body>
 </html>

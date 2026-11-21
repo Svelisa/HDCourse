@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>תפקיד כל רכיב | יחידה 2 | הכשרת נציגי HELPDESK</title>
+  <title>מיינו את הרכיבים | יחידה 2 | הכשרת נציגי HELPDESK</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700;800&display=swap">
   <link rel="stylesheet" href="../../css/base.css">
   <link rel="stylesheet" href="../../css/layout.css">
@@ -18,27 +18,46 @@
   <div class="shell">
     <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
     <nav class="side-menu" aria-label="פרקי היחידה">
-      <div class="prog" data-module="2" data-lessons="3">
+      <div class="prog" data-module="2" data-lessons="12">
         <span id="pt" aria-live="polite"></span>
-        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><i id="pb"></i></div>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0"><i id="pb"></i></div>
       </div>
       <div class="menu-list">
         <a href="index.html">סקירת היחידה</a>
         <a href="chapter-1.html" data-lesson="2-1">רכיבי המחשב</a>
-        <a href="chapter-2.html" data-lesson="2-2" aria-current="page">תפקיד כל רכיב</a>
-        <a href="chapter-3.html" data-lesson="2-3">בדיקת ידע</a>
+        <a href="chapter-2.html" data-lesson="2-2" aria-current="page">מיינו את הרכיבים</a>
+        <a href="chapter-3.html" data-lesson="2-3">סקירת מארז המחשב</a>
+        <a href="chapter-4.html" data-lesson="2-4">אמצעי אחסון</a>
+        <a href="chapter-5.html" data-lesson="2-5">לוח אם</a>
+        <a href="chapter-6.html" data-lesson="2-6">מעבד (CPU)</a>
+        <a href="chapter-7.html" data-lesson="2-7">זיכרון במחשב</a>
+        <a href="chapter-8.html" data-lesson="2-8">היררכיית זיכרון</a>
+        <a href="chapter-9.html" data-lesson="2-9">תרגול: היררכיית זיכרון</a>
+        <a href="chapter-10.html" data-lesson="2-10">BIOS</a>
+        <a href="chapter-11.html" data-lesson="2-11">UEFI</a>
+        <a href="chapter-12.html" data-lesson="2-12">תרגול: BIOS ו-UEFI</a>
       </div>
     </nav>
 
     <main id="main" tabindex="-1">
       <section class="hero slim">
-        <p class="hero-sub">יחידה 2 · פרק 2 מתוך 3</p>
-        <h1>תפקיד כל רכיב</h1>
+        <p class="hero-sub">יחידה 2 · פרק 2 מתוך 12</p>
+        <h1>מיינו את הרכיבים</h1>
       </section>
 
       <section class="card">
-        <h2>תוכן הפרק</h2>
-        <div class="ph">כאן יופיע תוכן הפרק.</div>
+        <h2>תרגיל מיון: קלט, פלט או שניהם?</h2>
+        <p>חלקו את ההתקנים לקלט (Input), לפלט (Output) או לשניהם באמצעות גרירה. אפשר גם ללחוץ על התקן ואז על "הוסיפו לכאן" בתא הרצוי.</p>
+        <div class="dd" data-lesson="2-2">
+          <div class="dd-pool" role="group" aria-label="התקנים שממתינים לשיבוץ"><button type="button" class="dd-item" data-answer="o" data-label="מקרן" aria-pressed="false"><i class="bi bi-projector" aria-hidden="true"></i> מקרן</button><button type="button" class="dd-item" data-answer="i" data-label="בקר משחק וג׳ויסטיק" aria-pressed="false"><i class="bi bi-gamepad" aria-hidden="true"></i> בקר משחק וג׳ויסטיק</button><button type="button" class="dd-item" data-answer="o" data-label="מדפסת" aria-pressed="false"><i class="bi bi-printer" aria-hidden="true"></i> מדפסת</button><button type="button" class="dd-item" data-answer="b" data-label="מסך מגע" aria-pressed="false"><i class="bi bi-touchscreen" aria-hidden="true"></i> מסך מגע</button><button type="button" class="dd-item" data-answer="i" data-label="סורק" aria-pressed="false"><i class="bi bi-scanner" aria-hidden="true"></i> סורק</button><button type="button" class="dd-item" data-answer="o" data-label="רמקולים" aria-pressed="false"><i class="bi bi-speaker" aria-hidden="true"></i> רמקולים</button></div>
+          <div class="dd-bins"><section class="dd-bin" data-id="i" data-name="קלט (Input)" aria-label="קלט (Input)"><h3>קלט (Input)</h3><p class="sub">מכניסים מידע למחשב</p><button type="button" class="dd-place" disabled>הוסיפו לכאן</button><div class="dd-list" role="group" aria-label="התקנים בתא קלט (Input)"></div></section><section class="dd-bin" data-id="o" data-name="פלט (Output)" aria-label="פלט (Output)"><h3>פלט (Output)</h3><p class="sub">מציגים תוצאות מהמחשב</p><button type="button" class="dd-place" disabled>הוסיפו לכאן</button><div class="dd-list" role="group" aria-label="התקנים בתא פלט (Output)"></div></section><section class="dd-bin" data-id="b" data-name="שניהם" aria-label="שניהם"><h3>שניהם</h3><p class="sub">גם קלט וגם פלט</p><button type="button" class="dd-place" disabled>הוסיפו לכאן</button><div class="dd-list" role="group" aria-label="התקנים בתא שניהם"></div></section></div>
+          <div class="dd-actions">
+            <button type="button" class="btn dd-check">בדיקה</button>
+            <button type="button" class="btn ghost dd-back">החזרה למאגר</button>
+            <button type="button" class="btn ghost dd-reset">איפוס</button>
+          </div>
+          <p class="dd-result" role="status" aria-live="polite"></p>
+        </div>
       </section>
     </main>
 
@@ -47,11 +66,11 @@
   <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
   <div class="dock">
     <div class="dock-in">
-      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
       <div class="foot" role="group" aria-label="ניווט בין פרקים">
-        <a class="btn ghost prev" href="chapter-1.html"><span aria-hidden="true">→</span> הפרק הקודם</a>
-        <a class="btn ghost next" href="chapter-3.html">הפרק הבא <span aria-hidden="true">←</span></a>
-        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <a class="btn ghost prev" href="chapter-1.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> הפרק הקודם</a>
+        <a class="btn ghost next" href="chapter-3.html">הפרק הבא <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
         <button type="button" class="btn mark" data-lesson="2-2" aria-pressed="false">סימון כהושלם</button>
       </div>
     </div>
@@ -59,5 +78,6 @@
 
   <script src="../../js/icons.js"></script>
   <script src="../../js/progress.js"></script>
+  <script src="../../js/dragdrop.js"></script>
 </body>
 </html>

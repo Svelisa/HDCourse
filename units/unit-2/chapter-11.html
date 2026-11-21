@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>UEFI | יחידה 2 | הכשרת נציגי HELPDESK</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+  <a class="skip" href="#main">דילוג לתוכן הראשי</a>
+  <header class="site-header">
+    <a href="../../index.html">הכשרת נציגי HELPDESK</a>
+  </header>
+
+  <div class="shell">
+    <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
+    <nav class="side-menu" aria-label="פרקי היחידה">
+      <div class="prog" data-module="2" data-lessons="12">
+        <span id="pt" aria-live="polite"></span>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0"><i id="pb"></i></div>
+      </div>
+      <div class="menu-list">
+        <a href="index.html">סקירת היחידה</a>
+        <a href="chapter-1.html" data-lesson="2-1">רכיבי המחשב</a>
+        <a href="chapter-2.html" data-lesson="2-2">מיינו את הרכיבים</a>
+        <a href="chapter-3.html" data-lesson="2-3">סקירת מארז המחשב</a>
+        <a href="chapter-4.html" data-lesson="2-4">אמצעי אחסון</a>
+        <a href="chapter-5.html" data-lesson="2-5">לוח אם</a>
+        <a href="chapter-6.html" data-lesson="2-6">מעבד (CPU)</a>
+        <a href="chapter-7.html" data-lesson="2-7">זיכרון במחשב</a>
+        <a href="chapter-8.html" data-lesson="2-8">היררכיית זיכרון</a>
+        <a href="chapter-9.html" data-lesson="2-9">תרגול: היררכיית זיכרון</a>
+        <a href="chapter-10.html" data-lesson="2-10">BIOS</a>
+        <a href="chapter-11.html" data-lesson="2-11" aria-current="page">UEFI</a>
+        <a href="chapter-12.html" data-lesson="2-12">תרגול: BIOS ו-UEFI</a>
+      </div>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <section class="hero slim">
+        <p class="hero-sub">יחידה 2 · פרק 11 מתוך 12</p>
+        <h1><span lang="en">UEFI</span></h1>
+      </section>
+
+      <section class="card">
+        <h2><span lang="en">UEFI – Unified Extensible Firmware Interface</span></h2>
+        <div class="split">
+          <div class="split-text">
+          <p>ה-<span lang="en">UEFI</span> נועד להחליף את ממשק הקושחה <span lang="en">BIOS</span> כגרסה משודרגת שלו. הוא מאתחל את החומרה, בודק את פונקציונליות החומרה וטוען את מערכת ההפעלה.</p>
+          <p>ההבדל מה-<span lang="en">BIOS</span> הוא תמיכה במחיצות אתחול במשקל של יותר מ-<span lang="en">2TB</span>, יותר מ-4 מחיצות בכונן קשיח אחד, טעינה מואצת, תפריט רב לשוני, ממשק גרפי נוח ופונקציונליות מעט יותר מתקדמת.</p>
+          <p>עבור המשתמש הרגיל, אין הבדל משמעותי בשימוש ב-<span lang="en">UEFI</span> וב-<span lang="en">BIOS</span>. גם ב-<span lang="en">BIOS</span> וגם ב-<span lang="en">UEFI</span> ניתן להגדיר את סדר האתחול והעדיפות, להגדיר סיסמת אתחול ולשחק עם הגדרות האוברקלוקינג.</p>
+          <p>אם אין קושחת <span lang="en">UEFI</span> באתר הרשמי של יצרן לוח האם, לא ניתן להוריד אותה בשום מקום. כל קושחת <span lang="en">UEFI</span> (כמו <span lang="en">BIOS</span>) היא ייחודית לכל דגם לוח אם.</p>
+        </div>
+          <figure class="bios">
+          <svg class="bios-svg" viewBox="0 0 640 400" role="img" aria-label="איור של שבב קושחה (UEFI) על לוח אם" focusable="false">
+            <rect width="640" height="400" fill="#1f6f5c"/>
+            <g stroke="#e0b84c" stroke-width="3" fill="none" stroke-linecap="round"><path d="M20 60h140l30 30h40M20 120h100M20 280h120l30-30h30M620 70h-120l-30 30h-30M620 190h-100M620 320h-130l-30-30h-30M200 20v60M440 20v60M200 380v-60M440 380v-60"/></g>
+            <g fill="#c9d2dc"><rect x="60" y="150" width="34" height="14" rx="2"/><rect x="60" y="180" width="34" height="14" rx="2"/><rect x="60" y="210" width="34" height="14" rx="2"/><rect x="540" y="150" width="34" height="14" rx="2"/><rect x="540" y="180" width="34" height="14" rx="2"/><rect x="540" y="210" width="34" height="14" rx="2"/></g>
+            <g fill="#8a96ad"><circle cx="110" cy="50" r="14"/><circle cx="530" cy="350" r="14"/><circle cx="110" cy="350" r="14"/></g>
+            <g fill="#e0b84c"><rect x="180" y="120" width="10" height="20"/><rect x="204" y="120" width="10" height="20"/><rect x="228" y="120" width="10" height="20"/><rect x="252" y="120" width="10" height="20"/><rect x="276" y="120" width="10" height="20"/><rect x="300" y="120" width="10" height="20"/><rect x="324" y="120" width="10" height="20"/><rect x="348" y="120" width="10" height="20"/><rect x="372" y="120" width="10" height="20"/><rect x="396" y="120" width="10" height="20"/><rect x="420" y="120" width="10" height="20"/><rect x="444" y="120" width="10" height="20"/>
+              <rect x="180" y="260" width="10" height="20"/><rect x="204" y="260" width="10" height="20"/><rect x="228" y="260" width="10" height="20"/><rect x="252" y="260" width="10" height="20"/><rect x="276" y="260" width="10" height="20"/><rect x="300" y="260" width="10" height="20"/><rect x="324" y="260" width="10" height="20"/><rect x="348" y="260" width="10" height="20"/><rect x="372" y="260" width="10" height="20"/><rect x="396" y="260" width="10" height="20"/><rect x="420" y="260" width="10" height="20"/><rect x="444" y="260" width="10" height="20"/></g>
+            <rect x="170" y="136" width="296" height="128" rx="8" fill="#232a36"/>
+            <circle cx="190" cy="156" r="6" fill="#5b6780"/>
+            <text x="318" y="215" fill="#ffffff" font-size="44" font-weight="800" text-anchor="middle" font-family="Arial, sans-serif">UEFI</text>
+          </svg>
+          <figcaption>שבב הקושחה נמצא על לוח האם.</figcaption>
+        </figure>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
+  <div class="dock">
+    <div class="dock-in">
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <div class="foot" role="group" aria-label="ניווט בין פרקים">
+        <a class="btn ghost prev" href="chapter-10.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> הפרק הקודם</a>
+        <a class="btn ghost next" href="chapter-12.html">הפרק הבא <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <button type="button" class="btn mark" data-lesson="2-11" aria-pressed="false">סימון כהושלם</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../js/icons.js"></script>
+  <script src="../../js/progress.js"></script>
+</body>
+</html>

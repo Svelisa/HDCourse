@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>פרופיל משתמש | יחידה 3 | הכשרת נציגי HELPDESK</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+  <a class="skip" href="#main">דילוג לתוכן הראשי</a>
+  <header class="site-header">
+    <a href="../../index.html">הכשרת נציגי HELPDESK</a>
+  </header>
+
+  <div class="shell">
+    <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
+    <nav class="side-menu" aria-label="פרקי היחידה">
+      <div class="prog" data-module="3" data-lessons="10">
+        <span id="pt" aria-live="polite"></span>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><i id="pb"></i></div>
+      </div>
+      <div class="menu-list">
+        <a href="index.html">סקירת היחידה</a>
+        <a href="chapter-1.html" data-lesson="3-1">מהי מערכת הפעלה?</a>
+        <a href="chapter-2.html" data-lesson="3-2">מערכות ההפעלה הנפוצות</a>
+        <a href="chapter-3.html" data-lesson="3-3">דרכים להתקנת מערכת הפעלה</a>
+        <a href="chapter-4.html" data-lesson="3-4">ממשקי ניהול של Windows</a>
+        <a href="chapter-5.html" data-lesson="3-5">Registry</a>
+        <a href="chapter-6.html" data-lesson="3-6">שימוש בפקודות ב-Windows</a>
+        <a href="chapter-7.html" data-lesson="3-7">פקודות נפוצות ב-CMD</a>
+        <a href="chapter-8.html" data-lesson="3-8">פקודות שימושיות בארגון</a>
+        <a href="chapter-9.html" data-lesson="3-9" aria-current="page">פרופיל משתמש</a>
+        <a href="chapter-10.html" data-lesson="3-10">בדיקת ידע</a>
+      </div>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <section class="hero slim">
+        <p class="hero-sub">יחידה 3 · פרק 9 מתוך 10</p>
+        <h1>פרופיל משתמש</h1>
+      </section>
+
+      <section class="card" data-lesson="3-9">
+        <h2>מהו פרופיל משתמש?</h2>
+        <div class="split split-md">
+          <div class="split-text">
+            <p>פרופיל משתמש במחשב הוא קבוצה של הגדרות, העדפות והגדרות אישיות שמקושרות למשתמש מסוים במערכת ההפעלה.</p>
+            <p>כל פרופיל משתמש יכול להכיל מידע כגון הגדרות כתובת דוא"ל, רקע מסך, העדפות מערכת, איות מועדף, תצורת תוכנות ועוד.</p>
+            <p>כאשר משתמש מתחבר למחשב באמצעות פרופיל משתמש, המערכת מזהה אותו ומטעינה את ההגדרות וההעדפות המקושרות אליו. זה מאפשר למשתמש להתאים אישית את חוויית השימוש במחשב בהתאם להעדפותיו האישיות.</p>
+            <p>הפרופיל של כל משתמש נשמר בתיקייה משלו בנתיב <span class="cmd-code">C:\Users</span></p>
+          </div>
+          <figure class="bios"><svg class="bios-svg" viewBox="0 0 400 330" role="img" aria-label="איור: חלונות סייר הקבצים עם התיקייה C:\Users ותיקיית הפרופיל של משתמש" focusable="false"><rect width="400" height="330" fill="#f7f9fd"/><rect x="8" y="8" width="384" height="124" rx="8" fill="#fff" stroke="#b7c2d2" stroke-width="2"/><path d="M8 16a8 8 0 0 1 8-8h368a8 8 0 0 1 8 8v18H8z" fill="#e8f0fe" transform="translate(0 0)"/><g fill="#7d8aa0"><circle cx="24" cy="22" r="3"/><circle cx="36" cy="22" r="3"/><circle cx="48" cy="22" r="3"/></g><rect x="16" y="40" width="368" height="22" rx="4" fill="#f1f4f9"/><text x="24" y="56" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#2a3446">This PC  ›  OS (C:)  ›  Users</text><path transform="translate(24 74)" d="M0 3a2 2 0 0 1 2-2h5l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z" fill="#f5c542"/><text x="52" y="88" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#2a3446">Public</text><path transform="translate(24 100)" d="M0 3a2 2 0 0 1 2-2h5l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z" fill="#f5c542"/><text x="52" y="114" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#2a3446">user</text><rect x="8" y="146" width="384" height="176" rx="8" fill="#fff" stroke="#b7c2d2" stroke-width="2"/><path d="M8 154a8 8 0 0 1 8-8h368a8 8 0 0 1 8 8v18H8z" fill="#e8f0fe" transform="translate(0 0)"/><g fill="#7d8aa0"><circle cx="24" cy="160" r="3"/><circle cx="36" cy="160" r="3"/><circle cx="48" cy="160" r="3"/></g><rect x="16" y="178" width="368" height="22" rx="4" fill="#f1f4f9"/><text x="24" y="194" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#2a3446">This PC  ›  OS (C:)  ›  Users  ›  user</text><path transform="translate(24 212)" d="M0 3a2 2 0 0 1 2-2h5l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z" fill="#f5c542"/><text x="52" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#2a3446">Desktop</text><path transform="translate(24 238)" d="M0 3a2 2 0 0 1 2-2h5l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z" fill="#f5c542"/><text x="52" y="252" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#2a3446">Documents</text><path transform="translate(24 264)" d="M0 3a2 2 0 0 1 2-2h5l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z" fill="#f5c542"/><text x="52" y="278" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#2a3446">Downloads</text><path transform="translate(24 290)" d="M0 3a2 2 0 0 1 2-2h5l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z" fill="#f5c542"/><text x="52" y="304" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#2a3446">Pictures</text></svg></figure>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>היכן נשמר הפרופיל?</h2>
+        <div class="split split-md">
+          <div class="split-text">
+            <p>כפי שראינו, פרופיל המשתמש שמור בכונן <span lang="en">C</span> של המחשב. כלומר, אם יש תקלה בכונן או שיש צורך לפרמט את המחשב (התקנה מחדש של מערכת ההפעלה), המידע הזה יימחק.</p>
+            <h3>שרת פרופילים</h3>
+            <p>חלק מהארגונים עובדים עם שרת פרופילים. בשרת קיים העתק של פרופיל המשתמש המקומי.</p>
+            <p>בכל התחברות (<span lang="en">Login</span>) והתנתקות (<span lang="en">Log off</span>) מתבצע סנכרון בין הפרופיל המקומי לפרופיל הרשתי, וכך ניתן לגבות את המידע והשינויים שנעשו ברמת המחשב.</p>
+            <p>יתרון נוסף: אפשר לעבוד עם הפרופיל האישי בכל מחשב באותה סביבת עבודה, גם במחשב שאינו המחשב הקבוע של העובד. בעת ההתחברות הפרופיל נשלף מהרשת, והעובד יכול לעבוד כאילו זה המחשב הקבוע שלו.</p>
+            <h3>פרופיל בענן</h3>
+            <p>פתרון יעיל יותר שקיים היום הוא סנכרון הפרופיל לענן (<span lang="en">Cloud</span>). הוא עובד על אותו עיקרון כמו פרופיל רשתי, אבל מאוחסן בשרתי הענן של הארגון.</p>
+          </div>
+          <figure class="bios"><svg class="bios-svg" viewBox="0 0 400 320" role="img" aria-label="איור: סנכרון הפרופיל המקומי של המחשב עם שרת פרופילים ועם הענן" focusable="false"><rect width="400" height="320" fill="#f7f9fd"/><rect x="20" y="24" width="150" height="70" rx="10" fill="#1f6f5c"/><text x="95.0" y="57.0" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#fff">שרת פרופילים</text><text x="95.0" y="75.0" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#fff">פרופיל רשתי</text><rect x="230" y="24" width="150" height="70" rx="10" fill="#7b4a9c"/><text x="305.0" y="57.0" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#fff">ענן הארגון</text><text x="305.0" y="75.0" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#fff">פרופיל בענן</text><rect x="110" y="232" width="180" height="72" rx="10" fill="#0056d2"/><text x="200.0" y="266.0" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#fff">המחשב</text><text x="200.0" y="284.0" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#fff">פרופיל מקומי</text><line x1="110" y1="226" x2="95" y2="102" stroke="#00255d" stroke-width="2.5"/><line x1="290" y1="226" x2="305" y2="102" stroke="#00255d" stroke-width="2.5"/><g fill="#00255d"><path d="M95 98l-5 10h10zM110 230l-5-10h10zM305 98l-5 10h10zM290 230l-5-10h10z"/></g><text x="78" y="168" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#2a3446">סנכרון</text><text x="322" y="168" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#2a3446">סנכרון</text></svg></figure>
+        </div>
+        <p class="warn"><strong>שימו לב:</strong> אם אין גיבוי אוטומטי במסגרת הארגון, בעת טיפול בתקלות שעלולות להביא לאובדן מידע מומלץ לגבות את הפרופיל של המשתמש במקום אחר (כונני רשת, התקן <span lang="en">USB</span> וכו').</p>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
+  <div class="dock">
+    <div class="dock-in">
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <div class="foot" role="group" aria-label="ניווט בין פרקים">
+        <a class="btn ghost prev" href="chapter-8.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> הפרק הקודם</a>
+        <a class="btn ghost next" href="chapter-10.html">הפרק הבא <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <button type="button" class="btn mark" data-lesson="3-9" aria-pressed="false">סימון כהושלם</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../js/icons.js"></script>
+  <script src="../../js/progress.js"></script>
+</body>
+</html>

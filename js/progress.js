@@ -9,13 +9,14 @@
   "use strict";
 
   var STORAGE_KEY = "helpdesk-course-v1";
-  var state = { done: {}, lessons: {} };
+  var state = { done: {}, lessons: {}, seen: {} };
 
   // טעינה מהדפדפן
   try {
     var saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
     if (saved.done) state.done = saved.done;
     if (saved.lessons) state.lessons = saved.lessons;
+    if (saved.seen) state.seen = saved.seen;
   } catch (e) { /* localStorage חסום – ממשיכים בלי שמירה */ }
 
   function save() {
@@ -101,4 +102,23 @@
   }
 
   paint();
+
+  /* ממשק לסקריפטים אחרים (למשל tiles.js) – מעקב אוטומטי:
+     - getSeen/setSeen: אילו פריטים בפרק כבר נצפו (נשמר בדפדפן)
+     - complete: סימון פרק כהושלם אוטומטית, למשל אחרי שצפו בכל התכנים שבו */
+  window.courseProgress = {
+    getSeen: function (key) { return state.seen[key] || []; },
+    setSeen: function (key, list) { state.seen[key] = list; save(); },
+    part: function (key, id, need) {
+      var p = (window.__parts = window.__parts || {});
+      p[key] = p[key] || {}; p[key][id] = true;
+      if (Object.keys(p[key]).length >= need) this.complete(key);
+    },
+    complete: function (key) {
+      if (state.lessons[key]) return;
+      state.lessons[key] = true;
+      paint();
+      save();
+    }
+  };
 })();

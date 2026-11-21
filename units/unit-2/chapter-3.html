@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>בדיקת ידע | יחידה 2 | הכשרת נציגי HELPDESK</title>
+  <title>סקירת מארז המחשב | יחידה 2 | הכשרת נציגי HELPDESK</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700;800&display=swap">
   <link rel="stylesheet" href="../../css/base.css">
   <link rel="stylesheet" href="../../css/layout.css">
@@ -18,27 +18,76 @@
   <div class="shell">
     <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
     <nav class="side-menu" aria-label="פרקי היחידה">
-      <div class="prog" data-module="2" data-lessons="3">
+      <div class="prog" data-module="2" data-lessons="12">
         <span id="pt" aria-live="polite"></span>
-        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><i id="pb"></i></div>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0"><i id="pb"></i></div>
       </div>
       <div class="menu-list">
         <a href="index.html">סקירת היחידה</a>
         <a href="chapter-1.html" data-lesson="2-1">רכיבי המחשב</a>
-        <a href="chapter-2.html" data-lesson="2-2">תפקיד כל רכיב</a>
-        <a href="chapter-3.html" data-lesson="2-3" aria-current="page">בדיקת ידע</a>
+        <a href="chapter-2.html" data-lesson="2-2">מיינו את הרכיבים</a>
+        <a href="chapter-3.html" data-lesson="2-3" aria-current="page">סקירת מארז המחשב</a>
+        <a href="chapter-4.html" data-lesson="2-4">אמצעי אחסון</a>
+        <a href="chapter-5.html" data-lesson="2-5">לוח אם</a>
+        <a href="chapter-6.html" data-lesson="2-6">מעבד (CPU)</a>
+        <a href="chapter-7.html" data-lesson="2-7">זיכרון במחשב</a>
+        <a href="chapter-8.html" data-lesson="2-8">היררכיית זיכרון</a>
+        <a href="chapter-9.html" data-lesson="2-9">תרגול: היררכיית זיכרון</a>
+        <a href="chapter-10.html" data-lesson="2-10">BIOS</a>
+        <a href="chapter-11.html" data-lesson="2-11">UEFI</a>
+        <a href="chapter-12.html" data-lesson="2-12">תרגול: BIOS ו-UEFI</a>
       </div>
     </nav>
 
     <main id="main" tabindex="-1">
       <section class="hero slim">
-        <p class="hero-sub">יחידה 2 · פרק 3 מתוך 3</p>
-        <h1>בדיקת ידע</h1>
+        <p class="hero-sub">יחידה 2 · פרק 3 מתוך 12</p>
+        <h1>סקירת מארז המחשב</h1>
       </section>
 
       <section class="card">
-        <h2>שאלות</h2>
-        <div class="ph">כאן יוכנסו שאלות עם משוב מיידי.</div>
+        <h2>מהו מארז המחשב?</h2>
+        <p>מארז המחשב הוא הקופסה שבתוכה נמצאים רכיבי החומרה הפנימיים של המחשב. הוא מגן עליהם, מחזיק אותם במקומם ומסייע בקירור.</p>
+      </section>
+
+      <section class="card hs" data-lesson="2-3">
+        <h2>הציצו אל תוך המארז</h2>
+        <p class="hint">לחצו על כל נקודה בתמונה כדי לקרוא על הרכיב.</p>
+        <div class="hs-stage">
+          <svg class="hs-svg" viewBox="0 0 640 400" role="img" aria-label="איור של פנים מארז מחשב: ספק כוח, מאוורר, לוח האם וכונן דיסק קשיח" focusable="false">
+            <rect width="640" height="400" fill="#f7f9fd"/>
+            <rect x="30" y="14" width="580" height="372" rx="14" fill="#1b2433"/>
+            <rect x="46" y="30" width="548" height="340" rx="8" fill="#2a3446"/>
+            <!-- ספק כוח -->
+            <rect x="64" y="44" width="160" height="76" rx="6" fill="#5b6780"/>
+            <circle cx="104" cy="82" r="26" fill="#3a4659"/><circle cx="104" cy="82" r="7" fill="#8a96ad"/>
+            <path d="M144 62h66M144 82h66M144 102h66" stroke="#8a96ad" stroke-width="4" stroke-linecap="round"/>
+            <!-- מאוורר -->
+            <circle cx="92" cy="226" r="38" fill="#3a4659"/><circle cx="92" cy="226" r="30" fill="#1b2433"/>
+            <g fill="#8a96ad"><path d="M92 226c-4-22 14-26 20-14z"/><path d="M92 226c22-4 26 14 14 20z"/><path d="M92 226c4 22-14 26-20 14z"/><path d="M92 226c-22 4-26-14-14-20z"/></g><circle cx="92" cy="226" r="6" fill="#2a3446"/>
+            <!-- לוח אם -->
+            <rect x="140" y="136" width="270" height="222" rx="6" fill="#2f4a8a"/>
+            <rect x="170" y="164" width="86" height="86" rx="4" fill="#8a96ad"/>
+            <g stroke="#5b6780" stroke-width="3"><path d="M182 170v74M194 170v74M206 170v74M218 170v74M230 170v74M242 170v74"/></g>
+            <g fill="#8cc4ff"><rect x="290" y="156" width="10" height="90" rx="2"/><rect x="306" y="156" width="10" height="90" rx="2"/><rect x="322" y="156" width="10" height="90" rx="2"/><rect x="338" y="156" width="10" height="90" rx="2"/></g>
+            <g fill="#e8f0fe"><rect x="162" y="288" width="210" height="9" rx="2"/><rect x="162" y="308" width="210" height="9" rx="2"/><rect x="162" y="328" width="210" height="9" rx="2"/></g>
+            <!-- מפרצי כוננים -->
+            <rect x="440" y="44" width="140" height="314" rx="6" fill="#3d4a60"/>
+            <g fill="#5b8fe8"><rect x="452" y="56" width="116" height="44" rx="4"/><rect x="452" y="112" width="116" height="44" rx="4"/><rect x="452" y="168" width="116" height="44" rx="4"/><rect x="452" y="224" width="116" height="44" rx="4"/><rect x="452" y="280" width="116" height="62" rx="4"/></g>
+            <g fill="#1b2433"><circle cx="552" cy="78" r="6"/><circle cx="552" cy="134" r="6"/><circle cx="552" cy="190" r="6"/><circle cx="552" cy="246" r="6"/></g>
+            <!-- כבלים -->
+            <g fill="none" stroke="#e8a27c" stroke-width="5" stroke-linecap="round"><path d="M224 90c60 0 70 60 120 40s60-70 96-50"/><path d="M200 112c0 60 70 30 120 80s90 20 120-8"/></g>
+          </svg>
+          <button type="button" class="hs-pt" data-id="power" style="left:24%;top:21%" aria-label="ספק כוח" aria-pressed="false"><span class="hs-dot" aria-hidden="true"></span></button><button type="button" class="hs-pt" data-id="fan" style="left:14.5%;top:56.5%" aria-label="מאוורר" aria-pressed="false"><span class="hs-dot" aria-hidden="true"></span></button><button type="button" class="hs-pt" data-id="board" style="left:55%;top:75%" aria-label="לוח האם" aria-pressed="false"><span class="hs-dot" aria-hidden="true"></span></button><button type="button" class="hs-pt" data-id="bays" style="left:78.5%;top:50%" aria-label="כונן דיסק קשיח" aria-pressed="false"><span class="hs-dot" aria-hidden="true"></span></button>
+        </div>
+        <dialog class="dlg" aria-labelledby="hsT">
+          <div class="dlg-in">
+            <div class="dlg-head"><span class="ic dlg-ic" data-for="power" hidden><i class="bi bi-power" aria-hidden="true"></i></span><span class="ic dlg-ic" data-for="fan" hidden><i class="bi bi-fan" aria-hidden="true"></i></span><span class="ic dlg-ic" data-for="board" hidden><i class="bi bi-cpu" aria-hidden="true"></i></span><span class="ic dlg-ic" data-for="bays" hidden><i class="bi bi-hdd" aria-hidden="true"></i></span><h3 id="hsT"></h3><button type="button" class="x" aria-label="סגירה"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+            <div class="dlg-body"></div>
+            <div class="dlg-foot dlg-foot-empty" aria-hidden="true"></div>
+          </div>
+        </dialog>
+        <template id="hs-power" data-title="ספק כוח"><p>יחידה אלקטרונית שתפקידה לספק מתח / זרם חשמלי הדרוש להפעלת המעגלים האלקטרוניים במחשב.</p></template><template id="hs-fan" data-title="מאוורר"><p>מערכת הקירור של המחשב.</p></template><template id="hs-board" data-title="לוח האם"><p>המשטח המרכזי עליו מתנהלת פעולתו הפנימית של המחשב.</p></template><template id="hs-bays" data-title='כונן דיסק קשיח<br><span lang="en">Hard Disk Drive</span>'><p>אמצעי אחסון בלתי נדיף המשמש לשמירת כמות גדולה של מידע.</p></template>
       </section>
     </main>
 
@@ -47,11 +96,11 @@
   <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
   <div class="dock">
     <div class="dock-in">
-      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
       <div class="foot" role="group" aria-label="ניווט בין פרקים">
-        <a class="btn ghost prev" href="chapter-2.html"><span aria-hidden="true">→</span> הפרק הקודם</a>
-        <a class="btn ghost next" href="../unit-3/index.html">היחידה הבאה <span aria-hidden="true">←</span></a>
-        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <a class="btn ghost prev" href="chapter-2.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> הפרק הקודם</a>
+        <a class="btn ghost next" href="chapter-4.html">הפרק הבא <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
         <button type="button" class="btn mark" data-lesson="2-3" aria-pressed="false">סימון כהושלם</button>
       </div>
     </div>
@@ -59,5 +108,6 @@
 
   <script src="../../js/icons.js"></script>
   <script src="../../js/progress.js"></script>
+  <script src="../../js/hotspots.js"></script>
 </body>
 </html>

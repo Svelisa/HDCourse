@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>פקודות שימושיות בארגון | יחידה 3 | הכשרת נציגי HELPDESK</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+  <a class="skip" href="#main">דילוג לתוכן הראשי</a>
+  <header class="site-header">
+    <a href="../../index.html">הכשרת נציגי HELPDESK</a>
+  </header>
+
+  <div class="shell">
+    <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
+    <nav class="side-menu" aria-label="פרקי היחידה">
+      <div class="prog" data-module="3" data-lessons="10">
+        <span id="pt" aria-live="polite"></span>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><i id="pb"></i></div>
+      </div>
+      <div class="menu-list">
+        <a href="index.html">סקירת היחידה</a>
+        <a href="chapter-1.html" data-lesson="3-1">מהי מערכת הפעלה?</a>
+        <a href="chapter-2.html" data-lesson="3-2">מערכות ההפעלה הנפוצות</a>
+        <a href="chapter-3.html" data-lesson="3-3">דרכים להתקנת מערכת הפעלה</a>
+        <a href="chapter-4.html" data-lesson="3-4">ממשקי ניהול של Windows</a>
+        <a href="chapter-5.html" data-lesson="3-5">Registry</a>
+        <a href="chapter-6.html" data-lesson="3-6">שימוש בפקודות ב-Windows</a>
+        <a href="chapter-7.html" data-lesson="3-7">פקודות נפוצות ב-CMD</a>
+        <a href="chapter-8.html" data-lesson="3-8" aria-current="page">פקודות שימושיות בארגון</a>
+        <a href="chapter-9.html" data-lesson="3-9">פרופיל משתמש</a>
+        <a href="chapter-10.html" data-lesson="3-10">בדיקת ידע</a>
+      </div>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <section class="hero slim">
+        <p class="hero-sub">יחידה 3 · פרק 8 מתוך 10</p>
+        <h1>פקודות שימושיות בארגון</h1>
+      </section>
+
+      <section class="card hs" data-lesson="3-8">
+        <h2>פקודות שימושיות בארגון</h2>
+        <p class="hint">לחצו על כל פקודה כדי לקרוא עליה.</p>
+        <div class="tiles c3"><button type="button" class="tile hs-pt" data-id="gpupdate" aria-haspopup="dialog"><span class="ic" aria-hidden="true"><i class="bi bi-scroll"></i></span><span class="t" lang="en">GPUPDATE</span></button><button type="button" class="tile hs-pt" data-id="gpresult" aria-haspopup="dialog"><span class="ic" aria-hidden="true"><i class="bi bi-file-search"></i></span><span class="t" lang="en">GPRESULT</span></button><button type="button" class="tile hs-pt" data-id="netuse" aria-haspopup="dialog"><span class="ic" aria-hidden="true"><i class="bi bi-diagram-3"></i></span><span class="t" lang="en">NET USE</span></button></div>
+        <dialog class="dlg" aria-labelledby="hsT">
+          <div class="dlg-in">
+            <div class="dlg-head"><span class="ic dlg-ic" data-for="gpupdate" hidden><i class="bi bi-scroll" aria-hidden="true"></i></span><span class="ic dlg-ic" data-for="gpresult" hidden><i class="bi bi-file-search" aria-hidden="true"></i></span><span class="ic dlg-ic" data-for="netuse" hidden><i class="bi bi-diagram-3" aria-hidden="true"></i></span><h3 id="hsT"></h3><button type="button" class="x" aria-label="סגירה"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+            <div class="dlg-body"></div>
+            <div class="dlg-foot dlg-foot-empty" aria-hidden="true"></div>
+          </div>
+        </dialog>
+        <template id="hs-gpupdate" data-title='GPUPDATE'><figure class="dlg-fig"><svg viewBox="0 0 400 201" role="img" aria-label="דוגמה לפלט הפקודה בשורת הפקודה" focusable="false" style="direction:ltr"><rect width="400" height="201" rx="8" fill="#0c0c0c"/><text x="16" y="28" font-family="Consolas, Menlo, monospace" font-size="12" fill="#ffffff" xml:space="preserve">C:\Users\admin&gt;gpupdate</text><text x="16" y="47" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">Updating policy...</text><text x="16" y="66" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve"></text><text x="16" y="85" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">Computer Policy update has completed</text><text x="16" y="104" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">successfully.</text><text x="16" y="123" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">User Policy update has completed</text><text x="16" y="142" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">successfully.</text><text x="16" y="161" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve"></text><text x="16" y="180" font-family="Consolas, Menlo, monospace" font-size="12" fill="#ffffff" xml:space="preserve">C:\Users\admin&gt;_</text></svg></figure><p>פקודה שכופה עדכון מיידי של המדיניות הקבוצתית (<span lang="en">Group Policy</span>).</p><ul class="cmds"><li>עדכון של פוליסות שעודכנו: <span class="cmd-code">gpupdate</span></li><li>עדכון של כל הפוליסות: <span class="cmd-code">gpupdate /force</span></li></ul></template><template id="hs-gpresult" data-title='GPRESULT -R'><figure class="dlg-fig"><svg viewBox="0 0 400 201" role="img" aria-label="דוגמה לפלט הפקודה בשורת הפקודה" focusable="false" style="direction:ltr"><rect width="400" height="201" rx="8" fill="#0c0c0c"/><text x="16" y="28" font-family="Consolas, Menlo, monospace" font-size="12" fill="#ffffff" xml:space="preserve">C:\Users\admin&gt;gpresult /r</text><text x="16" y="47" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve"></text><text x="16" y="66" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">RSOP data for corp\user on PC1 : Logging Mode</text><text x="16" y="85" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">OS Configuration:   Member Workstation</text><text x="16" y="104" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">OS Version:         10.0.19045</text><text x="16" y="123" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">Site Name:          Default-First-Site-Name</text><text x="16" y="142" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve"></text><text x="16" y="161" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">Applied Group Policy Objects</text><text x="16" y="180" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">    Default Domain Policy</text></svg></figure><p>פקודה שמפיקה רשימת פוליסות שחלות על משתמש או על מחשב.</p><p>זהו כלי מעשי למנהלי <span lang="en">IT</span> לפתרון בעיות של מדיניות קבוצתית במערכת <span lang="en">Windows</span>.</p></template><template id="hs-netuse" data-title='NET USE'><figure class="dlg-fig"><svg viewBox="0 0 400 182" role="img" aria-label="דוגמה לפלט הפקודה בשורת הפקודה" focusable="false" style="direction:ltr"><rect width="400" height="182" rx="8" fill="#0c0c0c"/><text x="16" y="28" font-family="Consolas, Menlo, monospace" font-size="12" fill="#ffffff" xml:space="preserve">C:\Users\admin&gt;net use</text><text x="16" y="47" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">New connections will be remembered.</text><text x="16" y="66" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve"></text><text x="16" y="85" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">Status    Local    Remote</text><text x="16" y="104" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">-----------------------------------------</text><text x="16" y="123" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">OK        X:       \\server\shared</text><text x="16" y="142" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">OK        Z:       \\server\docs</text><text x="16" y="161" font-family="Consolas, Menlo, monospace" font-size="12" fill="#cccccc" xml:space="preserve">The command completed successfully.</text></svg></figure><p>הפקודה משמשת לחיבור, להסרה ולהגדרה של חיבורים למשאבים משותפים, כמו מדפסות רשת וכוננים ממופים.</p></template>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
+  <div class="dock">
+    <div class="dock-in">
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <div class="foot" role="group" aria-label="ניווט בין פרקים">
+        <a class="btn ghost prev" href="chapter-7.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> הפרק הקודם</a>
+        <a class="btn ghost next" href="chapter-9.html">הפרק הבא <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <button type="button" class="btn mark" data-lesson="3-8" aria-pressed="false">סימון כהושלם</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../js/icons.js"></script>
+  <script src="../../js/progress.js"></script>
+  <script src="../../js/hotspots.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>סוגי מדפסות | יחידה 4 | הכשרת נציגי HELPDESK</title>
+  <title>התקנת תוכנות במחשב | יחידה 4 | הכשרת נציגי HELPDESK</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700;800&display=swap">
   <link rel="stylesheet" href="../../css/base.css">
   <link rel="stylesheet" href="../../css/layout.css">
@@ -18,28 +18,40 @@
   <div class="shell">
     <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
     <nav class="side-menu" aria-label="פרקי היחידה">
-      <div class="prog" data-module="4" data-lessons="4">
+      <div class="prog" data-module="4" data-lessons="5">
         <span id="pt" aria-live="polite"></span>
-        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><i id="pb"></i></div>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0"><i id="pb"></i></div>
       </div>
       <div class="menu-list">
         <a href="index.html">סקירת היחידה</a>
-        <a href="chapter-1.html" data-lesson="4-1" aria-current="page">סוגי מדפסות</a>
-        <a href="chapter-2.html" data-lesson="4-2">הגדרת מדפסת למשתמש</a>
-        <a href="chapter-3.html" data-lesson="4-3">טיפול בתקלות בסיסיות</a>
-        <a href="chapter-4.html" data-lesson="4-4">בדיקת ידע</a>
+        <a href="chapter-1.html" data-lesson="4-1" aria-current="page">התקנת תוכנות במחשב</a>
+        <a href="chapter-2.html" data-lesson="4-2">תהליך התקנה של SCCM</a>
+        <a href="chapter-3.html" data-lesson="4-3">Software Center</a>
+        <a href="chapter-4.html" data-lesson="4-4">קטלוג תוכנות</a>
+        <a href="chapter-5.html" data-lesson="4-5">בדיקת ידע</a>
       </div>
     </nav>
 
     <main id="main" tabindex="-1">
       <section class="hero slim">
-        <p class="hero-sub">יחידה 4 · פרק 1 מתוך 4</p>
-        <h1>סוגי מדפסות</h1>
+        <p class="hero-sub">יחידה 4 · פרק 1 מתוך 5</p>
+        <h1>התקנת תוכנות במחשב</h1>
       </section>
 
-      <section class="card">
-        <h2>תוכן הפרק</h2>
-        <div class="ph">כאן יופיע תוכן הפרק.</div>
+      <section class="card" data-lesson="4-1">
+        <h2>התקנת תוכנות במחשב</h2>
+        <div class="split split-md">
+          <div class="split-text">
+            <p>בסביבה ארגונית יש שתי דרכים להתקין תוכנות במחשב:</p>
+            <ol>
+              <li><strong>התקנה ידנית</strong> – הרצה של קובץ התקנה והשלמת התהליך בהתאם להנחיות (כמו במחשב ביתי).</li>
+              <li><strong>התקנה אוטומטית</strong> – הפצה של תוכנות באמצעות כלי לניהול הפצות.</li>
+            </ol>
+            <p>מכיוון שתהליכי עבודה בארגונים צריכים להיות מסודרים, מבוקרים ויעילים, לרוב הם מעדיפים לבצע התקנות של תוכנות באמצעות <span lang="en">SCCM</span> (<span lang="en">System Center Configuration Manager</span>).</p>
+            <p>זהו כלי שמאפשר ניהול, פריסה ואבטחה של מכשירים ויישומים ברחבי הארגון.</p>
+          </div>
+          <figure class="bios"><svg class="bios-svg" viewBox="0 0 400 300" role="img" aria-label="איור: חלון התקנת תוכנה עם פס התקדמות של 70 אחוז" focusable="false"><rect width="400" height="300" fill="#f7f9fd"/><rect x="16" y="16" width="368" height="268" rx="10" fill="#fff" stroke="#b7c2d2" stroke-width="2"/><path d="M16 26a10 10 0 0 1 10-10h348a10 10 0 0 1 10 10v20H16z" fill="#e8f0fe"/><g fill="#7d8aa0"><circle cx="34" cy="31" r="4"/><circle cx="48" cy="31" r="4"/><circle cx="62" cy="31" r="4"/></g><text x="200" y="104" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800" fill="#00255d">Installing</text><rect x="40" y="142" width="320" height="46" rx="6" fill="#eef2f8" stroke="#b7c2d2"/><rect x="48" y="150" width="26" height="30" rx="3" fill="#0056d2"/><rect x="78" y="150" width="26" height="30" rx="3" fill="#0056d2"/><rect x="108" y="150" width="26" height="30" rx="3" fill="#0056d2"/><rect x="138" y="150" width="26" height="30" rx="3" fill="#0056d2"/><rect x="168" y="150" width="26" height="30" rx="3" fill="#0056d2"/><rect x="198" y="150" width="26" height="30" rx="3" fill="#0056d2"/><rect x="228" y="150" width="26" height="30" rx="3" fill="#0056d2"/><rect x="258" y="150" width="26" height="30" rx="3" fill="#c9d6ea"/><rect x="288" y="150" width="26" height="30" rx="3" fill="#c9d6ea"/><rect x="318" y="150" width="26" height="30" rx="3" fill="#c9d6ea"/><text x="200" y="216" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#2a3446">70%</text><rect x="140" y="236" width="120" height="32" rx="6" fill="#fff" stroke="#00255d" stroke-width="2"/><text x="200" y="257" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#00255d">CANCEL</text></svg></figure>
+        </div>
       </section>
     </main>
 
@@ -48,11 +60,11 @@
   <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
   <div class="dock">
     <div class="dock-in">
-      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
       <div class="foot" role="group" aria-label="ניווט בין פרקים">
-        <a class="btn ghost prev" href="index.html"><span aria-hidden="true">→</span> סקירת היחידה</a>
-        <a class="btn ghost next" href="chapter-2.html">הפרק הבא <span aria-hidden="true">←</span></a>
-        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <a class="btn ghost prev" href="index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> סקירת היחידה</a>
+        <a class="btn ghost next" href="chapter-2.html">הפרק הבא <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
         <button type="button" class="btn mark" data-lesson="4-1" aria-pressed="false">סימון כהושלם</button>
       </div>
     </div>

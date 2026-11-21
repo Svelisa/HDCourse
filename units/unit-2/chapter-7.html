@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>זיכרון במחשב | יחידה 2 | הכשרת נציגי HELPDESK</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+  <a class="skip" href="#main">דילוג לתוכן הראשי</a>
+  <header class="site-header">
+    <a href="../../index.html">הכשרת נציגי HELPDESK</a>
+  </header>
+
+  <div class="shell">
+    <!-- תפריט צד: כל פרקי היחידה. הפרק הנוכחי מסומן ב-aria-current, וסימון ההשלמה מתעדכן ב-js/progress.js -->
+    <nav class="side-menu" aria-label="פרקי היחידה">
+      <div class="prog" data-module="2" data-lessons="12">
+        <span id="pt" aria-live="polite"></span>
+        <div class="bar" role="progressbar" aria-label="התקדמות ביחידה" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0"><i id="pb"></i></div>
+      </div>
+      <div class="menu-list">
+        <a href="index.html">סקירת היחידה</a>
+        <a href="chapter-1.html" data-lesson="2-1">רכיבי המחשב</a>
+        <a href="chapter-2.html" data-lesson="2-2">מיינו את הרכיבים</a>
+        <a href="chapter-3.html" data-lesson="2-3">סקירת מארז המחשב</a>
+        <a href="chapter-4.html" data-lesson="2-4">אמצעי אחסון</a>
+        <a href="chapter-5.html" data-lesson="2-5">לוח אם</a>
+        <a href="chapter-6.html" data-lesson="2-6">מעבד (CPU)</a>
+        <a href="chapter-7.html" data-lesson="2-7" aria-current="page">זיכרון במחשב</a>
+        <a href="chapter-8.html" data-lesson="2-8">היררכיית זיכרון</a>
+        <a href="chapter-9.html" data-lesson="2-9">תרגול: היררכיית זיכרון</a>
+        <a href="chapter-10.html" data-lesson="2-10">BIOS</a>
+        <a href="chapter-11.html" data-lesson="2-11">UEFI</a>
+        <a href="chapter-12.html" data-lesson="2-12">תרגול: BIOS ו-UEFI</a>
+      </div>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <section class="hero slim">
+        <p class="hero-sub">יחידה 2 · פרק 7 מתוך 12</p>
+        <h1>זיכרון במחשב</h1>
+      </section>
+
+      <section class="card">
+        <h2>זיכרון במחשב</h2>
+        <p>בואו נבין מה ההבדל בין <b>אחסון</b> (<span lang="en">Storage</span>) ל<b>זיכרון</b> (<span lang="en">Memory</span>).</p>
+      </section>
+
+      <section class="card iv" data-lesson="2-7">
+        <h2>צפו בסרטון וענו על השאלות</h2>
+        <p class="hint">הסרטון נעצר בנקודות קבועות. ענו על השאלה כדי להמשיך בצפייה.</p>
+        <div class="iv-player-box"><div class="iv-player"></div></div>
+        <p class="iv-status" aria-live="polite"></p>
+        <ol class="iv-steps" aria-label="התקדמות בשאלות"></ol>
+        <div class="iv-panel" hidden></div>
+        <p class="iv-credit">קרדיט: הסרטון נוצר ופורסם ב-<span lang="en">YouTube</span> על ידי יוצריו, וכל הזכויות בו שמורות להם. <a href="https://www.youtube.com/watch?v=H_M--weEzpA" target="_blank" rel="noopener">לצפייה במקור</a></p>
+        <script type="application/json" class="iv-data">
+{
+  "videoId": "H_M--weEzpA",
+  "items": [
+    {
+      "t": 20,
+      "q": "איזה רכיב שומר את המידע גם כשהמחשב כבוי?",
+      "opts": [
+        "זיכרון RAM",
+        "אחסון (דיסק קשיח או SSD)",
+        "זיכרון מטמון של המעבד"
+      ],
+      "ok": 1,
+      "why": "האחסון שומר מידע לטווח ארוך, גם בלי חשמל."
+    },
+    {
+      "t": 50,
+      "q": "מה מאפיין את זיכרון ה-RAM?",
+      "opts": [
+        "מהיר ונדיף – המידע בו נמחק בכיבוי",
+        "איטי ולא נדיף",
+        "משמש רק לשמירת קבצים לשנים"
+      ],
+      "ok": 0,
+      "why": "ה-RAM מחזיק את הנתונים שבשימוש כרגע, והם נמחקים כשהמחשב כבוי."
+    },
+    {
+      "t": 80,
+      "q": "כשפותחים תוכנה, לאן היא נטענת ומאיפה?",
+      "opts": [
+        "מהזיכרון אל האחסון",
+        "מהאחסון אל הזיכרון (RAM)",
+        "ישירות מהמסך אל המעבד"
+      ],
+      "ok": 1,
+      "why": "התוכנה נשמרת באחסון ונטענת ל-RAM, כדי שהמעבד יגיע אליה מהר."
+    },
+    {
+      "t": 110,
+      "q": "עבדתם על מסמך ולא שמרתם, ואז החשמל נפסק. מה קרה למסמך?",
+      "opts": [
+        "הוא נשמר אוטומטית באחסון",
+        "הוא אבד, כי היה רק בזיכרון הנדיף",
+        "הוא עבר לזיכרון המטמון"
+      ],
+      "ok": 1,
+      "why": "מה שלא נשמר לאחסון נמחק יחד עם תוכן ה-RAM."
+    },
+    {
+      "t": 140,
+      "q": "מה נכון לגבי הגודל הטיפוסי של אחסון וזיכרון?",
+      "opts": [
+        "האחסון גדול בהרבה (מאות ג׳יגה-בייט ויותר) והזיכרון קטן יותר",
+        "הזיכרון גדול בהרבה מהאחסון",
+        "אין ביניהם הבדל"
+      ],
+      "ok": 0,
+      "why": "האחסון זול וגדול, והזיכרון מהיר אך קטן יותר."
+    }
+  ]
+}
+        </script>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- שורת הניווט התחתונה: קבועה בתחתית המסך. כפתור הבית בעמודת התפריט, וכפתורי הניווט בעמודת התוכן -->
+  <div class="dock">
+    <div class="dock-in">
+      <a class="btn ghost home-side" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> חזרה לדף הבית</a>
+      <div class="foot" role="group" aria-label="ניווט בין פרקים">
+        <a class="btn ghost prev" href="chapter-6.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg> הפרק הקודם</a>
+        <a class="btn ghost next" href="chapter-8.html">הפרק הבא <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost home" href="../../index.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> דף הבית</a>
+        <button type="button" class="btn mark" data-lesson="2-7" aria-pressed="false">סימון כהושלם</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../js/icons.js"></script>
+  <script src="../../js/progress.js"></script>
+  <script src="../../js/ivideo.js"></script>
+</body>
+</html>
